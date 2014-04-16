@@ -3,6 +3,7 @@ package com.solrstart.solrdoc8;
 import java.io.IOException;
 import java.nio.file.*;
 import java.util.*;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.*;
@@ -12,7 +13,8 @@ public class Main {
     private static final PathConfig test47 = new PathConfig(
             "Solr 4.7.0",
             "/Volumes/RAMDisk/solr-4.7.0",
-            new String[]{"/Volumes/RAMDisk/source-solr-4.7.0/lucene", "/Volumes/RAMDisk/source-solr-4.7.0/solr"});
+            new String[]{"/Volumes/RAMDisk/source-solr-4.7.0/lucene", "/Volumes/RAMDisk/source-solr-4.7.0/solr"},
+            new String[]{"solr-core", "solr-.*", "lucene-core", "lucene-.*", ".*"});
     /**
      * Find all the classes present in Solr distribution (including war file)
      * Find which packages those classes come from
@@ -41,7 +43,7 @@ public class Main {
         usedSourceRootPaths.values().forEach(allValidPackages::addAll);
 
         //roll-up, the packages to common, also needed, parent
-        String mergedAllValidPackages = allValidPackages.stream().collect(Collectors.joining(":"));
+//        String mergedAllValidPackages = allValidPackages.stream().collect(Collectors.joining(":"));
         Set<String> rolledUpPackages = allValidPackages.stream()
                 .filter(packageName ->
                                 !allValidPackages
@@ -55,63 +57,72 @@ public class Main {
 
 
         System.out.println("Building group maps:");
-        Set<String> packagesAlreadyGrouped = new TreeSet<>();
 
-        //TODO: Broken, does not deal with duplicates well, assigns them to wrong categories
-        LinkedList<String> jarNameSortedByPackageCount = new LinkedList<>();
-        jarNameSortedByPackageCount.addAll(jarPackageMap.keySet());
+        // list of valid packages that is still left at the current stage of processing
+        // required because some packages show up in multiple jars and cause:
+        // java.util.MissingResourceException: Can't find resource for bundle com.sun.tools.doclets.internal.toolkit.resources.doclets, key doclet.Same_package_name_used
 
-        //Sort by count gives increasing numbers, then reverse to get the right order
-        Collections.sort(jarNameSortedByPackageCount,Comparator.comparingInt(name -> jarPackageMap.get(name).size()));
-        Collections.reverse(jarNameSortedByPackageCount);
+        Set<String> availableValidPackages = new TreeSet<String>();
+        availableValidPackages.addAll(allValidPackages); //start with full set
 
-        System.out.printf("Sanity checking groups. Before: %d, After: %d\n", jarPackageMap.size(), jarNameSortedByPackageCount.size());
+        //copy jarMaps to group maps with final name convention
+        Map<String, List<String>> groupMap = new TreeMap<>();
+        jarPackageMap.keySet().stream()
+                .filter(key -> key.indexOf("-test-framework") < 0) //skip test frameworks from the list
+                .forEach(key -> groupMap.put(mapJarToGroupName(key), jarPackageMap.get(key)));
 
         StringBuilder groupMaps = new StringBuilder();
+                
+        for(String groupPattern: config.groupOrder)
+        {
+            List<String> matchingGroups =
+                    groupMap.keySet().stream()
+                    .filter(key -> Pattern.matches(groupPattern, key))
+                    .collect(toList());
+            Collections.sort(matchingGroups); //for now - just alphabetically
+            for(String groupName: matchingGroups) {
+                List<String> groupPackages = groupMap.get(groupName);
+                List<String> validGroupPackages = groupPackages.stream()
+                        .filter(packageName -> availableValidPackages.contains(packageName))
+                        .collect(toList());
+                if (!validGroupPackages.isEmpty()) {
 
-        for(String jarName: jarNameSortedByPackageCount){
-            if (jarName.indexOf("-test-framework") > 0 )
-            {
-                continue; //skip those pesky test-frameworks with duplicate package names for Mocks
-            }
-            System.out.printf("Package count for the jar %s is %d\n", jarName, jarPackageMap.get(jarName).size());
-            List<String> allPackagesInJar = jarPackageMap.get(jarName);
-            List<String> packages = allPackagesInJar.stream().filter(packageName -> allValidPackages.contains(packageName)).collect(toList());
+                    //DEBUG
+                    System.out.println("Adding group: " + groupName);
 
-            if (!packages.isEmpty()) {
-                packages.stream().filter(name -> packagesAlreadyGrouped.contains(name)).forEach(name -> System.out.println("Skipping duplicate package: " + name));
-                packages.removeAll(packagesAlreadyGrouped);
-            }
-            if (!packages.isEmpty()) {
-                packagesAlreadyGrouped.addAll(packages);
-            }
+                    groupMaps.append(String.format("-group %s %s ",
+                            groupName,
+                            validGroupPackages.stream().collect(joining(":")).replace('/', '.')));
 
-            if (packages.isEmpty())
-            {
-                System.out.println("Skipping the group for: " + jarName);
-                continue;
-            }
+                    availableValidPackages.removeAll(validGroupPackages); //we assigned these package names; don't use again
 
-            if (packages.size() < allPackagesInJar.size())
-            {
-                System.out.println("Partial group for : " + jarName);
-                System.out.println("Include:");
-                packages.forEach(System.out::println);
-                System.out.println("Exclude:");
-                allPackagesInJar.removeAll(packages);
-                allPackagesInJar.forEach(System.out::println);
-            }
-            else
-            {
-                System.out.println("Full group for : " + jarName);
-            }
+                    //DEBUG
+                    if (validGroupPackages.size() < groupPackages.size())
+                    {
+                        System.out.println("Partial group for : " + groupName);
+                        System.out.println("Include:");
+                        validGroupPackages.forEach(System.out::println);
+                        System.out.println("Exclude:");
+                        groupPackages.removeAll(validGroupPackages);
+                        groupPackages.forEach(System.out::println);
+                    }
 
-
-            groupMaps.append(String.format("-group %s %s ",
-                jarName.replaceFirst("-(\\d+\\.)+jar", ""),
-                packages.stream().collect(joining(":")).replace('/', '.')
-            ));
+                }
+                else {
+                    //DEBUG
+//                    System.out.println("No valid packages found for group: " + groupName);
+                }
+                groupMap.remove(groupName); //to avoid matching later on more general regexps
+            }
         }
+        if (!groupMap.isEmpty())
+        {
+            System.err.println("Group order is not matching all packages. Leftover groups are:");
+            groupMap.keySet().forEach(System.err::println);
+        }
+
+
+
 
         System.out.print("\n\n======== Variables for the javadoc run ========\n\n");
 
@@ -134,6 +145,14 @@ public class Main {
         // Group maps for the overview page
         System.out.printf("export GROUP_MAPS=\"%s\"\n", groupMaps.toString().trim());
 
+    }
+
+    private static String mapJarToGroupName(String jarName) {
+        String groupName =  jarName.replaceFirst("-(\\d+\\.)+jar", "");
+        if (groupName.endsWith(".jar")){
+            groupName = groupName.replace(".jar", "");
+        }
+        return groupName;
     }
 
     private static Map<String, List<String>> getAllPackages(Map<String, List<Path>> jars) throws IOException {
