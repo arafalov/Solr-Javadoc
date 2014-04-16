@@ -13,5 +13,5 @@ rm -rf  $OUTPUT_PATH
 mkdir -p $OUTPUT_PATH
 
 javadoc -d $OUTPUT_PATH -windowtitle "$TITLE" -sourcepath $SOURCE_PATH -subpackages $SOURCE_PACKAGES  $GROUP_MAPS\
-    -notimestamp -nodeprecatedlist -notree -noindex -nohelp \
+    -notimestamp -nodeprecatedlist -noindex -nohelp \
     2>&1 |tee $OUTPUT_PATH/_javadoc.log
