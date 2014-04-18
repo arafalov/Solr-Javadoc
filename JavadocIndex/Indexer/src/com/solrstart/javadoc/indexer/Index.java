@@ -43,8 +43,8 @@ public class Index {
             System.out.println("Package: " + packageName);
             SolrInputDocument packageInfo = new SolrInputDocument();
             packageInfo.addField("id", ++id);
-            packageInfo.addField("type", "package");
-            packageInfo.addField("package", packageName, 2);
+            packageInfo.addField("type", "packageName");
+            packageInfo.addField("packageName", packageName, 2);
             packageInfo.addField("description", "Package " + packageName);
             docList.add(packageInfo);
 
@@ -55,9 +55,9 @@ public class Index {
                 {
                     SolrInputDocument classInfo = new SolrInputDocument();
                     classInfo.addField("id", ++id);
-                    classInfo.addField("type", "class");
-                    classInfo.addField("package", packageName); //no boost
-                    classInfo.addField("class", className, 2);
+                    classInfo.addField("type", "className");
+                    classInfo.addField("packageName", packageName); //no boost
+                    classInfo.addField("className", className, 2);
                     classInfo.addField("description", String.format("Class %s (in package %s)", className, packageName));
                     docList.add(classInfo);
                 }
@@ -69,8 +69,8 @@ public class Index {
                         SolrInputDocument superInfo = new SolrInputDocument();
                         superInfo.addField("id", ++id);
                         superInfo.addField("type", "inherit");
-                        superInfo.addField("package", packageName); //no boost
-                        superInfo.addField("class", superName); //no boost on super's name
+                        superInfo.addField("packageName", packageName); //no boost
+                        superInfo.addField("className", superName); //no boost on super's name
                         superInfo.addField("description", String.format("Class %s (in package %s) inherits from Class %s",
                                 className, packageName, superName));
                         docList.add(superInfo);
@@ -83,10 +83,10 @@ public class Index {
                     {
                         SolrInputDocument methodInfo = new SolrInputDocument();
                         methodInfo.addField("id", ++id);
-                        methodInfo.addField("type", "method");
-                        methodInfo.addField("package", packageName); //no boost
-                        methodInfo.addField("class", className);
-                        methodInfo.addField("method", methodName, 2);
+                        methodInfo.addField("type", "methodName");
+                        methodInfo.addField("packageName", packageName); //no boost
+                        methodInfo.addField("className", className);
+                        methodInfo.addField("methodName", methodName, 2);
                         methodInfo.addField("description", String.format("Method %s.%s (in package %s)", className, methodName, packageName));
                         docList.add(methodInfo);
                     }

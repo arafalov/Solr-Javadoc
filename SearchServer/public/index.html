@@ -1,0 +1,37 @@
+<head>
+    <link href="css/select2.css" rel="stylesheet"/>
+    <script src="js/jquery-2.1.0.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $("#e1").select2({
+            minimumInputLength: 3,
+            placeholder: "Search for a match",
+            ajax: {
+                url: "/lookup",
+                dataType: "json",
+                data: function(term, page){
+                    return { query: term };
+                },
+                results: function(data, page){
+                    console.log("Result", data);
+                    return {results: data};
+                },
+
+            },
+            formatResult: function(match){
+                //console.log("Match", match);
+                return "<strong>"+match.description+"</strong>";
+            },
+            formatSelection: function(s){
+                return s.description;
+            },
+
+        });
+    });
+    </script>
+</head>
+<body>
+<input id="e1" type="hidden" style="width:600px"/>
+
+</body>

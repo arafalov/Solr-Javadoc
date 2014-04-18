@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <schema version="1.5">
   <fields>
-    <field name="id"      type="string" indexed="true" stored="true" required="true" />
-    <field name="type"    type="string" indexed="true" stored="true" required="true" />
-	<field name="package" type="fullText" indexed="true" stored="true" />
-	<field name="class"   type="fullText" indexed="true" stored="true" />
-	<field name="method"  type="fullText" indexed="true" stored="true" />
-	<field name="field"   type="fullText" indexed="true" stored="true" />
+    <field name="id"      		type="string" indexed="true" stored="true" required="true" />
+    <field name="type"    		type="string" indexed="true" stored="true" required="true" />
+	<field name="packageName" 	type="fullText" indexed="true" stored="true" />
+	<field name="className"   	type="fullText" indexed="true" stored="true" />
+	<field name="methodName"  	type="fullText" indexed="true" stored="true" />
+	<field name="fieldName"		type="fullText" indexed="true" stored="true" />
 
 	<field name="description" type="string" stored="true" indexed="false" /> <!-- this is what we show to the user -->
   </fields>

@@ -8,5 +8,14 @@
   <requestHandler name="/update" class="solr.UpdateRequestHandler" />
   <requestHandler name="/admin" class="solr.admin.AdminHandlers" />
   <requestHandler name="/analysis/field" class="solr.FieldAnalysisRequestHandler" startup="lazy" />
+
+  <requestHandler name="/lookup" class="solr.SearchHandler" >
+		<lst name="defaults">
+			<str name="defType">edismax</str>
+			<str name="qf">packageName^8 className^4 methodName^2 fieldName</str>
+			<str name="tie">0.1</str>
+		</lst>
+	</requestHandler>
+
 </config>
 
