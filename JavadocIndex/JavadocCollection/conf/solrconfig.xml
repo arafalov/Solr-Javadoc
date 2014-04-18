@@ -14,6 +14,7 @@
 			<str name="defType">edismax</str>
 			<str name="qf">packageName^8 className^4 methodName^2 fieldName</str>
 			<str name="tie">0.1</str>
+			<str name="mm">100%</str>
 		</lst>
 	</requestHandler>
 
