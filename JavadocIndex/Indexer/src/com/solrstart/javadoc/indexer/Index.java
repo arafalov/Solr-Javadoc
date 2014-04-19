@@ -62,6 +62,8 @@ public class Index {
 
                     docList.add(classInfo);
                 }
+
+                //TODO: Rethink: a bit clunky. May become clearer after doing other reference types (e.g. @seeAlso)
                 ClassDoc superDoc = classDoc.superclass();
                 if (superDoc != null && !superDoc.qualifiedName().equals("java.lang.Object")) {
                     String superName = superDoc.name();
@@ -85,7 +87,7 @@ public class Index {
                     {
                         SolrInputDocument methodInfo = new SolrInputDocument();
                         methodInfo.addField("id", ++id);
-                        methodInfo.addField("type", "methodName");
+                        methodInfo.addField("type", "method");
                         methodInfo.addField("packageName", packageName); //no boost
                         methodInfo.addField("className", className);
                         methodInfo.addField("methodName", methodName, 10);
