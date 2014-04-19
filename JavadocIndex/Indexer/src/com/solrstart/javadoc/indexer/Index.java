@@ -16,18 +16,30 @@ import java.util.stream.Collectors;
 public class Index {
 
     /**
+     * The name of the module that current run is for
+     */
+    private static String MODULE;
+
+    /**
+     * Sequence number. Global across multiple invocations of start() method, as long as we are in the same run
+     */
+    private static long ID_SEQ = 0; //global across all invocations
+
+    /**
+     * Global Solr Server instance.
+     */
+    private static SolrServer SOLR_SERVER;
+
+    /**
      * Magic signature that gets invoked by the Javadoc as custom doclet
      * @param root
      * @return
      * @throws SolrServerException
      */
     public static boolean start(RootDoc root) throws SolrServerException, IOException {
-        SolrServer server = new HttpSolrServer( "http://localhost:8983/solr/JavadocCollection");
+        System.out.printf("Processing Module: %s, starting after ID: %d\n", MODULE, ID_SEQ);
 
         System.out.println("ClassDoc packages: " + root.classes().length);
-
-        server.deleteByQuery("*:*");
-        server.commit();
 
         long id=0;
 
@@ -39,9 +51,7 @@ public class Index {
             //Add the package itself
             String packageName = packageDoc.name();
             System.out.println("Package: " + packageName);
-            SolrInputDocument packageInfo = new SolrInputDocument();
-            packageInfo.addField("id", ++id);
-            packageInfo.addField("type", "package");
+            SolrInputDocument packageInfo = createSolrDoc("package");
             packageInfo.addField("packageName", packageName, 10);
             packageInfo.addField("description", "Package ${packageName}");
             addComment(packageDoc, packageInfo);
@@ -52,9 +62,7 @@ public class Index {
                 String className = classDoc.name();
                 System.out.printf("    Class: %s\n", className);
                 {
-                    SolrInputDocument classInfo = new SolrInputDocument();
-                    classInfo.addField("id", ++id);
-                    classInfo.addField("type", "class");
+                    SolrInputDocument classInfo = createSolrDoc("class");
                     classInfo.addField("packageName", packageName); //no boost
                     classInfo.addField("className", className, 10);
                     classInfo.addField("description", "Class ${className} (in package ${packageName})");
@@ -69,9 +77,7 @@ public class Index {
                     String superName = superDoc.name();
                     System.out.println("      Super: " + superName);
                     {
-                        SolrInputDocument superInfo = new SolrInputDocument();
-                        superInfo.addField("id", ++id);
-                        superInfo.addField("type", "inherit");
+                        SolrInputDocument superInfo = createSolrDoc("inherit");
                         superInfo.addField("packageName", packageName); //no boost
                         superInfo.addField("className", superName); //no boost on super's name
                         superInfo.addField("sourceClassName", className);
@@ -83,11 +89,9 @@ public class Index {
 
                 for (MethodDoc methodDoc : classDoc.methods()) {
                     String methodName = methodDoc.name();
-                    System.out.printf("        Method: %s\n", methodName);
+//                    System.out.printf("        Method: %s\n", methodName);
                     {
-                        SolrInputDocument methodInfo = new SolrInputDocument();
-                        methodInfo.addField("id", ++id);
-                        methodInfo.addField("type", "method");
+                        SolrInputDocument methodInfo = createSolrDoc("method");
                         methodInfo.addField("packageName", packageName); //no boost
                         methodInfo.addField("className", className);
                         methodInfo.addField("methodName", methodName, 10);
@@ -97,14 +101,22 @@ public class Index {
                     }
                 }
             }
-            server.add(docList);
+            SOLR_SERVER.add(docList);
         }
-        server.commit();
-        server.shutdown();
+        SOLR_SERVER.commit();
         return true;
 
     }
 
+    private static SolrInputDocument createSolrDoc(String type)
+    {
+        SolrInputDocument solrDoc = new SolrInputDocument();
+        solrDoc.addField("module", MODULE);
+        solrDoc.addField("id", ++ID_SEQ);
+        solrDoc.addField("type", type);
+        return solrDoc;
+
+    }
     private static void addComment(Doc doc, SolrInputDocument solrInfo) {
         Tag[] commentTags = doc.firstSentenceTags();
         if (commentTags == null || commentTags.length == 0) {return;} //no comments to add
@@ -117,16 +129,40 @@ public class Index {
     }
 
     /***
-     * This is a doclet. The main method here is just for testing purposes.
-     * @param args
+     * This is a doclet driver that triggers Javadoc repeatedly with passed-in parameters
+     * @param args - comes in groups of three: module sourcepath subpackages.
+     *             sourcepath and subpackages both accept the list separated by colons (':')
      */
-    public static void main(String[] args) {
-        Main.execute("JavadocIndexer", "com.solrstart.javadoc.indexer.Index", new String[]{
-                "-sourcepath",
-                "/Volumes/RAMDisk/source-solr-4.7.0/solr/core/src/java:/Volumes/RAMDisk/source-solr-4.7.0/lucene/core/src/java",
-                "-subpackages",
-                "org.apache.solr"
-        });
+    public static void main(String[] args) throws IOException, SolrServerException {
+        SOLR_SERVER = new HttpSolrServer( "http://localhost:8983/solr/JavadocCollection");
+
+        SOLR_SERVER.deleteByQuery("*:*");
+        SOLR_SERVER.commit();
+
+        if (args.length % 3 != 0){
+            System.err.println("We are expecting parameters in groups of 3: module sourcepath subpackages");
+        }
+        for(int offset = 0; offset<args.length; offset+=3){
+            MODULE = args[offset]; //set for global access
+            String sourcepath = args[offset+1];
+            String subpackages = args[offset+2];
+
+            Main.execute("JavadocIndexer", "com.solrstart.javadoc.indexer.Index", new String[]{
+                    "-sourcepath", sourcepath,
+                    "-subpackages", subpackages
+            });
+        }
+
+
+//        Main.execute("JavadocIndexer", "com.solrstart.javadoc.indexer.Index", new String[]{
+//                "-sourcepath",
+//                "/Volumes/RAMDisk/source-solr-4.7.0/solr/core/src/java:/Volumes/RAMDisk/source-solr-4.7.0/lucene/core/src/java",
+//                "-subpackages",
+//                "org.apache.solr"
+//        });
+
+        SOLR_SERVER.shutdown(); //just easier that tryin
+
     }
 
 }

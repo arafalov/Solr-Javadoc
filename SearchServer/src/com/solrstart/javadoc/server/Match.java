@@ -16,12 +16,12 @@ public class Match {
     @Field private final String methodName;
     @Field private final String description;
     @Field private final String comment;
-
+    @Field private final String module;
 
     private String htmlDescription;
     private String urlTarget;
 
-    public Match(String id, String type, String packageName, String className, String sourceClassName,  String methodName, String description, String comment)
+    public Match(String id, String type, String packageName, String className, String sourceClassName,  String methodName, String description, String comment, String module)
     {
         this.id = id;
         this.type = type;
@@ -31,24 +31,28 @@ public class Match {
         this.methodName = methodName;
         this.description = description;
         this.comment = comment;
+        this.module = module;
 
         switch(type) {
             case "package":
                 //e.g. http://localhost:8983/javadoc/solr-core/index.html?org/apache/solr/package-summary.html
-                urlTarget = String.format("http://localhost:8983/javadoc/solr-core/index.html?%s/package-summary.html",
+                urlTarget = String.format("http://localhost:8983/javadoc/%s/index.html?%s/package-summary.html",
+                        module,
                         packageName.replaceAll("\\.", "/"));
                 break;
             case "class":
             case "method":
                 //e.g. http://localhost:8983/javadoc/solr-core/index.html?org/apache/solr/SolrLogFormatter.html
                 //Can't do method signature anchor link yet
-                urlTarget = String.format("http://localhost:8983/javadoc/solr-core/index.html?%s/%s.html",
+                urlTarget = String.format("http://localhost:8983/javadoc/%s/index.html?%s/%s.html",
+                        module,
                         packageName.replaceAll("\\.", "/"),
                         className);
                 break;
             case "inherit":
                 //Same as class, but use sourceClassName
-                urlTarget = String.format("http://localhost:8983/javadoc/solr-core/index.html?%s/%s.html",
+                urlTarget = String.format("http://localhost:8983/javadoc/%s/index.html?%s/%s.html",
+                        module,
                         packageName.replaceAll("\\.", "/"),
                         sourceClassName);
                 break;
@@ -85,6 +89,10 @@ public class Match {
 
     public String getDescription() {
         return description;
+    }
+
+    public String getModule() {
+        return module;
     }
 
     public String getComment() {
