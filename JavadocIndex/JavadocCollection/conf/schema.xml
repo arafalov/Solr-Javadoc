@@ -19,7 +19,13 @@
     <fieldType name="string" class="solr.StrField" />
 
 	<fieldType name="fullText" class="solr.TextField" >
-		<analyzer>
+		<analyzer type="index">
+			<tokenizer class="solr.KeywordTokenizerFactory"/>
+			<filter class="solr.WordDelimiterFilterFactory" preserveOriginal="1" />
+			<filter class="solr.LowerCaseFilterFactory" />
+			<filter class="solr.EdgeNGramFilterFactory"  minGramSize="3" maxGramSize="40"/>
+		</analyzer>
+		<analyzer type="query">
 			<tokenizer class="solr.KeywordTokenizerFactory"/>
 			<filter class="solr.WordDelimiterFilterFactory" preserveOriginal="1" />
 			<filter class="solr.LowerCaseFilterFactory" />
