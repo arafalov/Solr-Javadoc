@@ -24,10 +24,6 @@ public class Index {
 
         System.out.println("ClassDoc packages: " + root.classes().length);
 
-//        for (ClassDoc classDoc : root.classes()) {
-//            System.out.println("ClassDoc: " + classDoc.qualifiedName());
-//        }
-
         server.deleteByQuery("*:*");
         server.commit();
 
@@ -43,8 +39,8 @@ public class Index {
             System.out.println("Package: " + packageName);
             SolrInputDocument packageInfo = new SolrInputDocument();
             packageInfo.addField("id", ++id);
-            packageInfo.addField("type", "packageName");
-            packageInfo.addField("packageName", packageName, 2);
+            packageInfo.addField("type", "package");
+            packageInfo.addField("packageName", packageName, 10);
             packageInfo.addField("description", "Package " + packageName);
             docList.add(packageInfo);
 
@@ -55,9 +51,9 @@ public class Index {
                 {
                     SolrInputDocument classInfo = new SolrInputDocument();
                     classInfo.addField("id", ++id);
-                    classInfo.addField("type", "className");
+                    classInfo.addField("type", "class");
                     classInfo.addField("packageName", packageName); //no boost
-                    classInfo.addField("className", className, 2);
+                    classInfo.addField("className", className, 10);
                     classInfo.addField("description", String.format("Class %s (in package %s)", className, packageName));
                     docList.add(classInfo);
                 }
@@ -86,7 +82,7 @@ public class Index {
                         methodInfo.addField("type", "methodName");
                         methodInfo.addField("packageName", packageName); //no boost
                         methodInfo.addField("className", className);
-                        methodInfo.addField("methodName", methodName, 2);
+                        methodInfo.addField("methodName", methodName, 10);
                         methodInfo.addField("description", String.format("Method %s.%s (in package %s)", className, methodName, packageName));
                         docList.add(methodInfo);
                     }
@@ -95,25 +91,6 @@ public class Index {
             server.add(docList);
         }
         server.commit();
-
-//        SolrInputDocument doc1 = new SolrInputDocument();
-//        doc1.addField( "id", 3);
-//        doc1.addField( "addr_from", "new from");
-//        doc1.addField( "addr_to", "new to" );
-//        doc1.addField( "subject", "new subject" );
-//        server.add(doc1);
-//        server.commit();
-//
-//
-//        SolrQuery query = new SolrQuery();
-//        query.setQuery( "*:*" );
-//        QueryResponse rsp = server.query( query );
-//        SolrDocumentList docs = rsp.getResults();
-//        docs.forEach(doc -> {
-//            System.out.println("Document: ");
-//            doc.getFieldNames().forEach(field -> System.out.printf("  %s=%s\n", field, doc.get(field)));
-//        });
-//
         server.shutdown();
         return true;
 
@@ -130,11 +107,6 @@ public class Index {
                 "-subpackages",
                 "org.apache.solr"
         });
-//        try {
-//            start(null);
-//        } catch (SolrServerException|IOException e) {
-//            e.printStackTrace();
-//        }
     }
 
 }
