@@ -45,6 +45,7 @@ public class AutoCompleteServer {
             overrides.clear();
             hightlightEntity.getHighlights().forEach(hl -> overrides.put(hl.getField().getName(), hl.getSnipplets().get(0))); //ignore multiple snippets for now
             match.createHTMLDescription(overrides);
+            match.lockTheURL("http://localhost:8983/javadoc");
             results.add(match);
         }
 

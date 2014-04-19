@@ -18,6 +18,8 @@ public class Match {
     @Field private final String comment;
     @Field private final String module;
 
+    private final String packageAsPath;
+
     private String htmlDescription;
     private String urlTarget;
 
@@ -33,34 +35,7 @@ public class Match {
         this.comment = comment;
         this.module = module;
 
-        switch(type) {
-            case "package":
-                //e.g. http://localhost:8983/javadoc/solr-core/index.html?org/apache/solr/package-summary.html
-                urlTarget = String.format("http://localhost:8983/javadoc/%s/index.html?%s/package-summary.html",
-                        module,
-                        packageName.replaceAll("\\.", "/"));
-                break;
-            case "class":
-            case "method":
-                //e.g. http://localhost:8983/javadoc/solr-core/index.html?org/apache/solr/SolrLogFormatter.html
-                //Can't do method signature anchor link yet
-                urlTarget = String.format("http://localhost:8983/javadoc/%s/index.html?%s/%s.html",
-                        module,
-                        packageName.replaceAll("\\.", "/"),
-                        className);
-                break;
-            case "inherit":
-                //Same as class, but use sourceClassName
-                urlTarget = String.format("http://localhost:8983/javadoc/%s/index.html?%s/%s.html",
-                        module,
-                        packageName.replaceAll("\\.", "/"),
-                        sourceClassName);
-                break;
-            default:
-                urlTarget = "http://localhost/OOPS.html"; //should not happen, but I am sure it will happen
-                break;
-        }
-
+        this.packageAsPath = packageName.replaceAll("\\.", "/");
     }
 
     public String getId() {
@@ -135,5 +110,39 @@ public class Match {
                 ? pattern
                 : pattern.replace("${" + varName + "}", replaceValue);
     }
+
+    public void lockTheURL(String base) {
+        switch(type) {
+            case "package":
+                //e.g. http://localhost:8983/javadoc/solr-core/index.html?org/apache/solr/package-summary.html
+                urlTarget = String.format("%s/%s/index.html?%s/package-summary.html",
+                        base,
+                        module,
+                        packageAsPath);
+                break;
+            case "class":
+            case "method":
+                //e.g. http://localhost:8983/javadoc/solr-core/index.html?org/apache/solr/SolrLogFormatter.html
+                //Can't do method signature anchor link yet
+                urlTarget = String.format("%s/%s/index.html?%s/%s.html",
+                        base,
+                        module,
+                        packageAsPath,
+                        className);
+                break;
+            case "inherit":
+                //Same as class, but use sourceClassName
+                urlTarget = String.format("%s/%s/index.html?%s/%s.html",
+                        base,
+                        module,
+                        packageAsPath,
+                        sourceClassName);
+                break;
+            default:
+                urlTarget = base +"?UNKNOWN"; //should not happen, but I am sure it will happen
+                break;
+        }
+    }
+
 
 }
