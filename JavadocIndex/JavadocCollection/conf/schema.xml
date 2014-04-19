@@ -8,7 +8,9 @@
 	<field name="methodName"  	type="fullText" indexed="true" stored="true" />
 	<field name="fieldName"		type="fullText" indexed="true" stored="true" />
 
-	<field name="description" type="string" stored="true" indexed="false" /> <!-- this is what we show to the user -->
+	<field name="sourceClassName" type="fullText" indexed="true" stored="true" />
+
+	<field name="description" type="string" stored="true" indexed="false" /> <!-- this is pattern (with ${varName} that we show to the user -->
   </fields>
   <uniqueKey>id</uniqueKey>
   <types>

@@ -6,17 +6,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Bean;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.solr.core.SolrTemplate;
+import org.springframework.data.solr.core.query.result.HighlightEntry;
+import org.springframework.data.solr.core.query.result.HighlightPage;
 import org.springframework.data.solr.repository.config.EnableSolrRepositories;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
 @Controller
 @EnableAutoConfiguration
@@ -26,17 +29,26 @@ public class AutoCompleteServer {
     @Autowired
     private MatchRepository matchRepository;
 
+
     @RequestMapping("/lookup")
     @ResponseBody
     List<Match> home(
             @RequestParam(value="query", required=false, defaultValue="solr") String query
     ){
 
-//        return new Match[]{new Match("1", "package", "class", "method", "The matched package.class.method")};
+        List<Match> results = new LinkedList<>();
 
+        HighlightPage<Match> searchResults = matchRepository.find(query, new PageRequest(0, 10));
+        Map<String, String> overrides = new TreeMap<>();
+        for (HighlightEntry<Match> hightlightEntity : searchResults.getHighlighted()) {
+            Match match = hightlightEntity.getEntity();
+            overrides.clear();
+            hightlightEntity.getHighlights().forEach(hl -> overrides.put(hl.getField().getName(), hl.getSnipplets().get(0))); //ignore multiple snippets for now
+            match.createHTMLDescription(overrides);
+            results.add(match);
+        }
 
-        Page<Match> results = matchRepository.find(query, new PageRequest(0, 10));
-        return results.getContent();
+        return results;
     }
 
 

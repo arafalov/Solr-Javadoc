@@ -41,7 +41,7 @@ public class Index {
             packageInfo.addField("id", ++id);
             packageInfo.addField("type", "package");
             packageInfo.addField("packageName", packageName, 10);
-            packageInfo.addField("description", "Package " + packageName);
+            packageInfo.addField("description", "Package ${packageName}");
             docList.add(packageInfo);
 
             //All types of classes (interfaces, errors, etc). Maybe split/later
@@ -54,7 +54,7 @@ public class Index {
                     classInfo.addField("type", "class");
                     classInfo.addField("packageName", packageName); //no boost
                     classInfo.addField("className", className, 10);
-                    classInfo.addField("description", String.format("Class %s (in package %s)", className, packageName));
+                    classInfo.addField("description", "Class ${className} (in package ${packageName})");
                     docList.add(classInfo);
                 }
                 ClassDoc superDoc = classDoc.superclass();
@@ -67,8 +67,8 @@ public class Index {
                         superInfo.addField("type", "inherit");
                         superInfo.addField("packageName", packageName); //no boost
                         superInfo.addField("className", superName); //no boost on super's name
-                        superInfo.addField("description", String.format("Class %s (in package %s) inherits from Class %s",
-                                className, packageName, superName));
+                        superInfo.addField("sourceClassName", className);
+                        superInfo.addField("description", "Class ${sourceClassName} (in package ${packageName}) inherits from Class ${className}");
                         docList.add(superInfo);
                     }
                 }
@@ -83,7 +83,7 @@ public class Index {
                         methodInfo.addField("packageName", packageName); //no boost
                         methodInfo.addField("className", className);
                         methodInfo.addField("methodName", methodName, 10);
-                        methodInfo.addField("description", String.format("Method %s.%s (in package %s)", className, methodName, packageName));
+                        methodInfo.addField("description", "Method ${className}.${methodName} (in package ${packageName})");
                         docList.add(methodInfo);
                     }
                 }
