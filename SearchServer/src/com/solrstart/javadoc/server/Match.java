@@ -19,6 +19,7 @@ public class Match {
 
 
     private String htmlDescription;
+    private String urlTarget;
 
     public Match(String id, String type, String packageName, String className, String sourceClassName,  String methodName, String description, String comment)
     {
@@ -30,6 +31,32 @@ public class Match {
         this.methodName = methodName;
         this.description = description;
         this.comment = comment;
+
+        switch(type) {
+            case "package":
+                //e.g. http://localhost:8983/javadoc/solr-core/index.html?org/apache/solr/package-summary.html
+                urlTarget = String.format("http://localhost:8983/javadoc/solr-core/index.html?%s/package-summary.html",
+                        packageName.replaceAll("\\.", "/"));
+                break;
+            case "class":
+            case "method":
+                //e.g. http://localhost:8983/javadoc/solr-core/index.html?org/apache/solr/SolrLogFormatter.html
+                //Can't do method signature anchor link yet
+                urlTarget = String.format("http://localhost:8983/javadoc/solr-core/index.html?%s/%s.html",
+                        packageName.replaceAll("\\.", "/"),
+                        className);
+                break;
+            case "inherit":
+                //Same as class, but use sourceClassName
+                urlTarget = String.format("http://localhost:8983/javadoc/solr-core/index.html?%s/%s.html",
+                        packageName.replaceAll("\\.", "/"),
+                        sourceClassName);
+                break;
+            default:
+                urlTarget = "http://localhost/OOPS.html"; //should not happen, but I am sure it will happen
+                break;
+        }
+
     }
 
     public String getId() {
@@ -68,6 +95,10 @@ public class Match {
         return htmlDescription;
     }
 
+    public String getUrlTarget() {
+        return urlTarget;
+    }
+
     //TODO: This should be possible to do automatically, since Spring somehow knows how to map!
     public void createHTMLDescription(Map<String, String> overrides)
     {
@@ -76,7 +107,6 @@ public class Match {
         result = replace(result, "sourceClassName", overrides.get("sourceClassName"), getSourceClassName());
         result = replace(result, "methodName", overrides.get("methodName"), getMethodName());
         this.htmlDescription = result;
-        System.out.println("htmlDescription: " + htmlDescription);
     }
 
     /**

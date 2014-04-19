@@ -14,7 +14,6 @@
                     return { query: term };
                 },
                 results: function(data, page){
-                    console.log("Result", data);
                     return {results: data};
                 },
 
@@ -33,6 +32,13 @@
             },
 
         });
+
+        //Events
+        $("#e1")
+            .on("change", function(e) {
+                console.log("change "+JSON.stringify({val:e.val, added:e.added, removed:e.removed}));
+                window.open(e.added.urlTarget);
+            })
     });
     </script>
 </head>
