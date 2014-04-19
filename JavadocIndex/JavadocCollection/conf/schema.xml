@@ -11,6 +11,8 @@
 	<field name="sourceClassName" type="fullText" indexed="true" stored="true" />
 
 	<field name="description" type="string" stored="true" indexed="false" /> <!-- this is pattern (with ${varName} that we show to the user -->
+	<field name="comment" type="string" stored="true" indexed="false" /> <!-- this is Javadoc comment (first sentence), where available -->
+
   </fields>
   <uniqueKey>id</uniqueKey>
   <types>

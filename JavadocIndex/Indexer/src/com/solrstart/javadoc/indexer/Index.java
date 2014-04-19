@@ -1,15 +1,17 @@
 package com.solrstart.javadoc.indexer;
 
 import com.sun.javadoc.*;
-import org.apache.solr.client.solrj.*;
-import org.apache.solr.client.solrj.impl.HttpSolrServer;
-import org.apache.solr.client.solrj.response.QueryResponse;
-import org.apache.solr.common.*;
 import com.sun.tools.javadoc.Main;
+import org.apache.solr.client.solrj.SolrServer;
+import org.apache.solr.client.solrj.SolrServerException;
+import org.apache.solr.client.solrj.impl.HttpSolrServer;
+import org.apache.solr.common.SolrInputDocument;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.LinkedList;
+import java.util.stream.Collectors;
 
 public class Index {
 
@@ -42,6 +44,7 @@ public class Index {
             packageInfo.addField("type", "package");
             packageInfo.addField("packageName", packageName, 10);
             packageInfo.addField("description", "Package ${packageName}");
+            addComment(packageDoc, packageInfo);
             docList.add(packageInfo);
 
             //All types of classes (interfaces, errors, etc). Maybe split/later
@@ -55,6 +58,8 @@ public class Index {
                     classInfo.addField("packageName", packageName); //no boost
                     classInfo.addField("className", className, 10);
                     classInfo.addField("description", "Class ${className} (in package ${packageName})");
+                    addComment(classDoc, classInfo);
+
                     docList.add(classInfo);
                 }
                 ClassDoc superDoc = classDoc.superclass();
@@ -69,6 +74,7 @@ public class Index {
                         superInfo.addField("className", superName); //no boost on super's name
                         superInfo.addField("sourceClassName", className);
                         superInfo.addField("description", "Class ${sourceClassName} (in package ${packageName}) inherits from Class ${className}");
+                        addComment(classDoc, superInfo);
                         docList.add(superInfo);
                     }
                 }
@@ -84,6 +90,7 @@ public class Index {
                         methodInfo.addField("className", className);
                         methodInfo.addField("methodName", methodName, 10);
                         methodInfo.addField("description", "Method ${className}.${methodName} (in package ${packageName})");
+                        addComment(methodDoc, methodInfo);
                         docList.add(methodInfo);
                     }
                 }
@@ -94,6 +101,17 @@ public class Index {
         server.shutdown();
         return true;
 
+    }
+
+    private static void addComment(Doc doc, SolrInputDocument solrInfo) {
+        Tag[] commentTags = doc.firstSentenceTags();
+        if (commentTags == null || commentTags.length == 0) {return;} //no comments to add
+
+        solrInfo.addField("comment",
+                Arrays.stream(commentTags)
+                        .map(t -> t.text())
+                        .collect(Collectors.joining())
+        );
     }
 
     /***

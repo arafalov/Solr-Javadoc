@@ -21,10 +21,15 @@
             },
             formatResult: function(match){
                 //console.log("Match", match);
-                return match.htmlDescription;
+                if (match.comment) {
+                    return "<dl><dt>"+match.htmlDescription + "</dt><dd><em>" + match.comment +"</em></dd></dl>";
+                } else {
+                    return match.htmlDescription;
+                }
+
             },
             formatSelection: function(s){
-                return s.description;
+                return s.htmlDescription;
             },
 
         });
@@ -32,6 +37,6 @@
     </script>
 </head>
 <body>
-<input id="e1" type="hidden" style="width:600px"/>
+<input id="e1" type="hidden" style="width:800px"/>
 
 </body>
