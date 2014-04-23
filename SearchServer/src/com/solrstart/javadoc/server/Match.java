@@ -17,13 +17,14 @@ public class Match {
     @Field private final String description;
     @Field private final String comment;
     @Field private final String module;
+    @Field private final String methodAnchor;
 
     private final String packageAsPath;
 
     private String htmlDescription;
     private String urlTarget;
 
-    public Match(String id, String type, String packageName, String className, String sourceClassName,  String methodName, String description, String comment, String module)
+    public Match(String id, String type, String packageName, String className, String sourceClassName,  String methodName, String description, String comment, String module, String methodAnchor)
     {
         this.id = id;
         this.type = type;
@@ -34,6 +35,7 @@ public class Match {
         this.description = description;
         this.comment = comment;
         this.module = module;
+        this.methodAnchor = methodAnchor;
 
         this.packageAsPath = packageName.replaceAll("\\.", "/");
     }
@@ -73,6 +75,8 @@ public class Match {
     public String getComment() {
         return comment;
     }
+
+    public String getMethodAnchor() { return methodAnchor; }
 
     public String getHtmlDescription() {
         return htmlDescription;
@@ -122,13 +126,21 @@ public class Match {
                 break;
             case "class":
             case "method":
-                //e.g. http://localhost:8983/javadoc/solr-core/index.html?org/apache/solr/SolrLogFormatter.html
-                //Can't do method signature anchor link yet
                 urlTarget = String.format("%s/%s/index.html?%s/%s.html",
                         base,
                         module,
                         packageAsPath,
                         className);
+
+            case "methodNoFrame": //dead for now. frames do not support #anchors
+                //e.g. http://localhost:8983/javadoc/solr-core/index.html?org/apache/solr/SolrLogFormatter.html
+                //Can't do method signature anchor link yet
+                urlTarget = String.format("%s/%s/index.html?%s/%s.html#%s",
+                        base,
+                        module,
+                        packageAsPath,
+                        className,
+                        methodAnchor);
                 break;
             case "inherit":
                 //Same as class, but use sourceClassName

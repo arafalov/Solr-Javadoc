@@ -95,6 +95,7 @@ public class Index {
                         methodInfo.addField("packageName", packageName); //no boost
                         methodInfo.addField("className", className);
                         methodInfo.addField("methodName", methodName, 10);
+                        methodInfo.addField("methodAnchor", buildAnchor(methodDoc));
                         methodInfo.addField("description", "Method ${className}.${methodName} (in package ${packageName})");
                         addComment(methodDoc, methodInfo);
                         docList.add(methodInfo);
@@ -106,6 +107,29 @@ public class Index {
         SOLR_SERVER.commit();
         return true;
 
+    }
+
+    private static String buildAnchor(MethodDoc methodDoc) {
+        StringBuilder result = new StringBuilder(methodDoc.name());
+
+        String sig = methodDoc.signature();
+        int bracketsDepth = 0;
+        for (char c : sig.toCharArray()) {
+            switch (c) {
+                case '<':
+                    bracketsDepth++;
+                    break;
+                case '>':
+                    bracketsDepth--;
+                    break;
+                default:
+                    if (bracketsDepth == 0) {
+                        result.append(c);
+                    }
+            }
+
+        }
+        return result.toString();
     }
 
     private static SolrInputDocument createSolrDoc(String type)
