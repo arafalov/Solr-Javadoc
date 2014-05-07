@@ -38,6 +38,13 @@ public class AutoCompleteServer {
 
         List<Match> results = new LinkedList<>();
 
+        //remove any characters that are not alphanumerics, spaces, underscores, dollars, or fullstops
+        query = query.replaceAll("[^a-zA-Z0-9 _$.]", " ");
+        query = query.replaceAll(" +", " "); //replace multiple spaces with one
+        if (query.length()<3) {
+            return null;
+        }
+
         HighlightPage<Match> searchResults = matchRepository.find(query, new PageRequest(0, 10));
         Map<String, String> overrides = new TreeMap<>();
         for (HighlightEntry<Match> hightlightEntity : searchResults.getHighlighted()) {
