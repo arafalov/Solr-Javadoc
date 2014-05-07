@@ -119,14 +119,16 @@ public class Match {
         switch(type) {
             case "package":
                 //e.g. http://localhost:8983/javadoc/solr-core/index.html?org/apache/solr/package-summary.html
-                urlTarget = String.format("%s/%s/index.html?%s/package-summary.html",
+//                urlTarget = String.format("%s/%s/index.html?%s/package-summary.html",
+                urlTarget = String.format("%s/%s/%s/package-summary.html",
                         base,
                         module,
                         packageAsPath);
                 break;
             case "class":
             case "method":
-                urlTarget = String.format("%s/%s/index.html?%s/%s.html",
+//                urlTarget = String.format("%s/%s/index.html?%s/%s.html",
+                urlTarget = String.format("%s/%s/%s/%s.html",
                         base,
                         module,
                         packageAsPath,
@@ -135,7 +137,8 @@ public class Match {
             case "methodNoFrame": //dead for now. frames do not support #anchors
                 //e.g. http://localhost:8983/javadoc/solr-core/index.html?org/apache/solr/SolrLogFormatter.html
                 //Can't do method signature anchor link yet
-                urlTarget = String.format("%s/%s/index.html?%s/%s.html#%s",
+//                urlTarget = String.format("%s/%s/index.html?%s/%s.html#%s",
+                urlTarget = String.format("%s/%s/%s/%s.html#%s",
                         base,
                         module,
                         packageAsPath,
@@ -144,7 +147,8 @@ public class Match {
                 break;
             case "inherit":
                 //Same as class, but use sourceClassName
-                urlTarget = String.format("%s/%s/index.html?%s/%s.html",
+//                urlTarget = String.format("%s/%s/index.html?%s/%s.html",
+                urlTarget = String.format("%s/%s/%s/%s.html",
                         base,
                         module,
                         packageAsPath,
