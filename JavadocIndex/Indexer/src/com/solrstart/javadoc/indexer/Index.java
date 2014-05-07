@@ -95,7 +95,7 @@ public class Index {
                         methodInfo.addField("packageName", packageName); //no boost
                         methodInfo.addField("className", className);
                         methodInfo.addField("methodName", methodName, 10);
-                        methodInfo.addField("methodAnchor", buildAnchor(methodDoc));
+                        methodInfo.addField("methodAnchor", buildHTMLAnchor(methodDoc));
                         methodInfo.addField("description", "Method ${className}.${methodName} (in package ${packageName})");
                         addComment(methodDoc, methodInfo);
                         docList.add(methodInfo);
@@ -109,23 +109,45 @@ public class Index {
 
     }
 
-    private static String buildAnchor(MethodDoc methodDoc) {
+    private static String buildHTMLAnchor(MethodDoc methodDoc) {
         StringBuilder result = new StringBuilder(methodDoc.name());
 
         String sig = methodDoc.signature();
         int bracketsDepth = 0;
         for (char c : sig.toCharArray()) {
-            switch (c) {
-                case '<':
-                    bracketsDepth++;
-                    break;
-                case '>':
+            if (bracketsDepth > 0)
+            {
+                if (c == '>') {
                     bracketsDepth--;
+                } else if (c == '<') {
+                    bracketsDepth++;
+                }
+                //else just skip, either way done for this character
+                continue;
+            }
+
+            switch (c) {
+                case '(':
+                case ')':
+                case ',':
+                    result.append('-');
+                    break;
+                case '[':
+                case ' ':
+                    break; //skip those
+                case ']':
+                    result.append(":A");
+                    break;
+                case '$':
+                    if (result.length() == 0) {result.append("Z:Z"); }
+                    result.append(":D");
+                    break;
+                case '_':
+                    if (result.length() == 0) {result.append("Z:Z"); }
+                    result.append(c);
                     break;
                 default:
-                    if (bracketsDepth == 0) {
-                        result.append(c);
-                    }
+                    result.append(c);
             }
 
         }
