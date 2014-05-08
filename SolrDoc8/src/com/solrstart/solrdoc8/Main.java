@@ -15,6 +15,14 @@ public class Main {
             "/Volumes/RAMDisk/solr-4.7.0",
             new String[]{"/Volumes/RAMDisk/source-solr-4.7.0/lucene", "/Volumes/RAMDisk/source-solr-4.7.0/solr"},
             new String[]{"solr-core", "solr-.*", "lucene-core", "lucene-.*", ".*"});
+
+    private static final PathConfig test48 = new PathConfig(
+            "Solr 4.8.0",
+            "/Volumes/RAMDisk/solr-4.8.0",
+            new String[]{"/Volumes/RAMDisk/source-solr-4.8.0/lucene", "/Volumes/RAMDisk/source-solr-4.8.0/solr"},
+            new String[]{"solr-core", "solr-.*", "lucene-core", "lucene-.*", ".*"});
+
+
     /**
      * Find all the classes present in Solr distribution (including war file)
      * Find which packages those classes come from
@@ -25,7 +33,7 @@ public class Main {
      */
     public static void main(String[] args) throws IOException{
         //assume test47 config
-        PathConfig config = test47;
+        PathConfig config = test48;
         Map<String, List<Path>> jars = findAllJars(config);
         Map<String, List<String>> jarPackageMap = getAllPackages(jars);
 
