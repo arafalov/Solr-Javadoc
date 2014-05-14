@@ -3,6 +3,7 @@ package com.solrstart.javadoc.server;
 import org.apache.solr.client.solrj.SolrServer;
 import org.apache.solr.client.solrj.impl.HttpSolrServer;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Bean;
@@ -29,6 +30,10 @@ public class AutoCompleteServer {
     @Autowired
     private MatchRepository matchRepository;
 
+    // Base URL (with final /) of where Javadoc lives. use --baseURL=/xyz to pass it in or via properties file
+    @Value("${baseURL}")
+    private String baseURL;
+
 
     @RequestMapping("/lookup")
     @ResponseBody
@@ -53,7 +58,8 @@ public class AutoCompleteServer {
             hightlightEntity.getHighlights().forEach(hl -> overrides.put(hl.getField().getName(), hl.getSnipplets().get(0))); //ignore multiple snippets for now
             match.createHTMLDescription(overrides);
 //            match.lockTheURL("http://localhost:8983/javadoc");
-            match.lockTheURL("/javadoc");
+//            match.lockTheURL("/javadoc");
+            match.lockTheURL(baseURL);
             results.add(match);
         }
 
