@@ -13,14 +13,9 @@ import org.springframework.data.solr.core.query.result.HighlightEntry;
 import org.springframework.data.solr.core.query.result.HighlightPage;
 import org.springframework.data.solr.repository.config.EnableSolrRepositories;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
 @Controller
 @EnableAutoConfiguration
@@ -35,7 +30,8 @@ public class AutoCompleteServer {
     private String baseURL;
 
 
-    @RequestMapping("/lookup")
+//    @RequestMapping("/lookup")
+    @RequestMapping("${lookupURL}")
     @ResponseBody
     List<Match> home(
             @RequestParam(value="query", required=false, defaultValue="solr") String query
