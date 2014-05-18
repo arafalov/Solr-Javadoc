@@ -8,9 +8,7 @@ import org.apache.solr.client.solrj.impl.HttpSolrServer;
 import org.apache.solr.common.SolrInputDocument;
 
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.LinkedList;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Index {
@@ -29,6 +27,11 @@ public class Index {
      * Global Solr Server instance.
      */
     private static SolrServer SOLR_SERVER;
+
+    /**
+     * The name of the Solr version that current run is for
+     */
+    private static String SOLR_VERSION;
 
     /**
      * Magic signature that gets invoked by the Javadoc as custom doclet
@@ -158,8 +161,9 @@ public class Index {
     {
         SolrInputDocument solrDoc = new SolrInputDocument();
         solrDoc.addField("module", MODULE);
-        solrDoc.addField("id", ++ID_SEQ);
+        solrDoc.addField("id", String.format("%s-%d", SOLR_VERSION ,++ID_SEQ));
         solrDoc.addField("type", type);
+        solrDoc.addField("version", SOLR_VERSION);
         return solrDoc;
 
     }
@@ -182,13 +186,16 @@ public class Index {
     public static void main(String[] args) throws IOException, SolrServerException {
         SOLR_SERVER = new HttpSolrServer( "http://localhost:8983/solr/JavadocCollection");
 
-        SOLR_SERVER.deleteByQuery("*:*");
+        if (args.length % 3 != 1){
+            System.err.println("We are expecting parameters start from solr version label and then in groups of 3: module sourcepath subpackages");
+        }
+
+        SOLR_VERSION = args[0]; //should be 4.8 or 4.7.1 or similar
+
+        SOLR_SERVER.deleteByQuery("version:" + SOLR_VERSION); //we trust this parameter not to be a hack...
         SOLR_SERVER.commit();
 
-        if (args.length % 3 != 0){
-            System.err.println("We are expecting parameters in groups of 3: module sourcepath subpackages");
-        }
-        for(int offset = 0; offset<args.length; offset+=3){
+        for(int offset = 1; offset<args.length; offset+=3){
             MODULE = args[offset]; //set for global access
             String sourcepath = args[offset+1];
             String subpackages = args[offset+2];

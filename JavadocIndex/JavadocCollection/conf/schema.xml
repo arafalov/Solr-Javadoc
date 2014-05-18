@@ -15,6 +15,7 @@
 	<field name="comment"       type="string" stored="true" indexed="false" /> <!-- this is Javadoc comment (first sentence), where available -->
     <field name="methodAnchor"  type="string" stored="true" indexed="false" /> <!-- useful for methods only -->
 
+    <field name="version"       type="string" stored="true" indexed="true" />
   </fields>
   <uniqueKey>id</uniqueKey>
   <types>
