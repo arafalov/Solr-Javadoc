@@ -9,6 +9,7 @@
             placeholder: "Search for a match",
             ajax: {
                 url: "/lookup",
+                quietMillis: 300,
                 dataType: "json",
                 data: function(term, page){
                     return { query: term };

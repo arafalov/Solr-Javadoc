@@ -1,0 +1,1105 @@
+Apache Maven 3.2.1 (ea8b2b07643dbb1b84b6d16e1f08391b666bc1e9; 2014-02-15T00:37:52+07:00)
+Maven home: /Users/arafalov/JavaLibraries/apache-maven-3.2.1
+Java version: 1.8.0, vendor: Oracle Corporation
+Java home: /Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre
+Default locale: en_US, platform encoding: UTF-8
+OS name: "mac os x", version: "10.9.2", arch: "x86_64", family: "mac"
+[INFO] Error stacktraces are turned on.
+[DEBUG] Reading global settings from /Users/arafalov/JavaLibraries/apache-maven-3.2.1/conf/settings.xml
+[DEBUG] Reading user settings from /Users/arafalov/.m2/settings.xml
+[DEBUG] Using local repository at /Users/arafalov/.m2/repository
+[DEBUG] Using manager EnhancedLocalRepositoryManager with priority 10.0 for /Users/arafalov/.m2/repository
+[INFO] Scanning for projects...
+[DEBUG] Extension realms for project com.solrstart:javadoc-server:jar:1.0-SNAPSHOT: (none)
+[DEBUG] Looking up lifecyle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.solrstart:javadoc-server:jar:1.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.springframework.boot:spring-boot-maven-plugin is missing. @ line 51, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[DEBUG] === REACTOR BUILD PLAN ================================================
+[DEBUG] Project: com.solrstart:javadoc-server:jar:1.0-SNAPSHOT
+[DEBUG] Tasks:   [clean, package]
+[DEBUG] Style:   Regular
+[DEBUG] =======================================================================
+[INFO] 
+[INFO] Using the builder org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder with a thread count of 1
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building javadoc-server 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[DEBUG] Resolving plugin version for org.springframework.boot:spring-boot-maven-plugin
+[DEBUG] Could not find metadata org.springframework.boot:spring-boot-maven-plugin/maven-metadata.xml in local (/Users/arafalov/.m2/repository)
+[DEBUG] Skipped remote update check for org.springframework.boot:spring-boot-maven-plugin/maven-metadata.xml, locally cached metadata up-to-date.
+[DEBUG] Skipped remote update check for org.springframework.boot:spring-boot-maven-plugin/maven-metadata.xml, locally cached metadata up-to-date.
+[DEBUG] Resolved plugin version for org.springframework.boot:spring-boot-maven-plugin to 1.0.2.RELEASE from repository spring-snapshots (http://repo.spring.io/libs-snapshot, releases+snapshots)
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] === PROJECT BUILD PLAN ================================================
+[DEBUG] Project:       com.solrstart:javadoc-server:1.0-SNAPSHOT
+[DEBUG] Dependencies (collect): []
+[DEBUG] Dependencies (resolve): [compile, runtime, test]
+[DEBUG] Repositories (dependencies): [spring-snapshots (http://repo.spring.io/libs-snapshot, releases+snapshots), central (http://repo.maven.apache.org/maven2, releases)]
+[DEBUG] Repositories (plugins)     : [spring-snapshots (http://repo.spring.io/libs-snapshot, releases+snapshots), central (http://repo.maven.apache.org/maven2, releases)]
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-clean-plugin:2.5:clean (default-clean)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <directory default-value="${project.build.directory}"/>
+  <excludeDefaultDirectories default-value="false">${clean.excludeDefaultDirectories}</excludeDefaultDirectories>
+  <failOnError default-value="true">${maven.clean.failOnError}</failOnError>
+  <followSymLinks default-value="false">${clean.followSymLinks}</followSymLinks>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <reportDirectory default-value="${project.reporting.outputDirectory}"/>
+  <retryOnError default-value="true">${maven.clean.retryOnError}</retryOnError>
+  <skip default-value="false">${clean.skip}</skip>
+  <testOutputDirectory default-value="${project.build.testOutputDirectory}"/>
+  <verbose>${clean.verbose}</verbose>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-resources-plugin:2.6:resources (default-resources)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <buildFilters default-value="${project.build.filters}"/>
+  <encoding default-value="${project.build.sourceEncoding}">${encoding}</encoding>
+  <escapeString>${maven.resources.escapeString}</escapeString>
+  <escapeWindowsPaths default-value="true">${maven.resources.escapeWindowsPaths}</escapeWindowsPaths>
+  <includeEmptyDirs default-value="false">${maven.resources.includeEmptyDirs}</includeEmptyDirs>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <overwrite default-value="false">${maven.resources.overwrite}</overwrite>
+  <project default-value="${project}"/>
+  <resources default-value="${project.resources}"/>
+  <session default-value="${session}"/>
+  <supportMultiLineFiltering default-value="false">${maven.resources.supportMultiLineFiltering}</supportMultiLineFiltering>
+  <useBuildFilters default-value="true"/>
+  <useDefaultDelimiters default-value="true"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-compiler-plugin:2.3.2:compile (default-compile)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <basedir default-value="${basedir}"/>
+  <buildDirectory default-value="${project.build.directory}"/>
+  <classpathElements default-value="${project.compileClasspathElements}"/>
+  <compileSourceRoots default-value="${project.compileSourceRoots}"/>
+  <compilerId default-value="javac">${maven.compiler.compilerId}</compilerId>
+  <compilerVersion>${maven.compiler.compilerVersion}</compilerVersion>
+  <debug default-value="true">${maven.compiler.debug}</debug>
+  <debuglevel>${maven.compiler.debuglevel}</debuglevel>
+  <encoding default-value="${project.build.sourceEncoding}">${encoding}</encoding>
+  <executable>${maven.compiler.executable}</executable>
+  <failOnError default-value="true">${maven.compiler.failOnError}</failOnError>
+  <fork default-value="false">${maven.compiler.fork}</fork>
+  <generatedSourcesDirectory default-value="${project.build.directory}/generated-sources/annotations"/>
+  <maxmem>${maven.compiler.maxmem}</maxmem>
+  <meminitial>${maven.compiler.meminitial}</meminitial>
+  <optimize default-value="false">${maven.compiler.optimize}</optimize>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <outputFileName>${project.build.finalName}</outputFileName>
+  <projectArtifact default-value="${project.artifact}"/>
+  <session default-value="${session}"/>
+  <showDeprecation default-value="false">${maven.compiler.showDeprecation}</showDeprecation>
+  <showWarnings default-value="false">${maven.compiler.showWarnings}</showWarnings>
+  <source default-value="1.5">1.8</source>
+  <staleMillis default-value="0">${lastModGranularityMs}</staleMillis>
+  <target default-value="1.5">1.8</target>
+  <verbose default-value="false">${maven.compiler.verbose}</verbose>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-resources-plugin:2.6:testResources (default-testResources)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <buildFilters default-value="${project.build.filters}"/>
+  <encoding default-value="${project.build.sourceEncoding}">${encoding}</encoding>
+  <escapeString>${maven.resources.escapeString}</escapeString>
+  <escapeWindowsPaths default-value="true">${maven.resources.escapeWindowsPaths}</escapeWindowsPaths>
+  <includeEmptyDirs default-value="false">${maven.resources.includeEmptyDirs}</includeEmptyDirs>
+  <outputDirectory default-value="${project.build.testOutputDirectory}"/>
+  <overwrite default-value="false">${maven.resources.overwrite}</overwrite>
+  <project default-value="${project}"/>
+  <resources default-value="${project.testResources}"/>
+  <session default-value="${session}"/>
+  <skip>${maven.test.skip}</skip>
+  <supportMultiLineFiltering default-value="false">${maven.resources.supportMultiLineFiltering}</supportMultiLineFiltering>
+  <useBuildFilters default-value="true"/>
+  <useDefaultDelimiters default-value="true"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-compiler-plugin:2.3.2:testCompile (default-testCompile)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <basedir default-value="${basedir}"/>
+  <buildDirectory default-value="${project.build.directory}"/>
+  <classpathElements default-value="${project.testClasspathElements}"/>
+  <compileSourceRoots default-value="${project.testCompileSourceRoots}"/>
+  <compilerId default-value="javac">${maven.compiler.compilerId}</compilerId>
+  <compilerVersion>${maven.compiler.compilerVersion}</compilerVersion>
+  <debug default-value="true">${maven.compiler.debug}</debug>
+  <debuglevel>${maven.compiler.debuglevel}</debuglevel>
+  <encoding default-value="${project.build.sourceEncoding}">${encoding}</encoding>
+  <executable>${maven.compiler.executable}</executable>
+  <failOnError default-value="true">${maven.compiler.failOnError}</failOnError>
+  <fork default-value="false">${maven.compiler.fork}</fork>
+  <generatedTestSourcesDirectory default-value="${project.build.directory}/generated-sources/test-annotations"/>
+  <maxmem>${maven.compiler.maxmem}</maxmem>
+  <meminitial>${maven.compiler.meminitial}</meminitial>
+  <optimize default-value="false">${maven.compiler.optimize}</optimize>
+  <outputDirectory default-value="${project.build.testOutputDirectory}"/>
+  <outputFileName>${project.build.finalName}</outputFileName>
+  <session default-value="${session}"/>
+  <showDeprecation default-value="false">${maven.compiler.showDeprecation}</showDeprecation>
+  <showWarnings default-value="false">${maven.compiler.showWarnings}</showWarnings>
+  <skip>${maven.test.skip}</skip>
+  <source default-value="1.5">1.8</source>
+  <staleMillis default-value="0">${lastModGranularityMs}</staleMillis>
+  <target default-value="1.5">1.8</target>
+  <testSource>${maven.compiler.testSource}</testSource>
+  <testTarget>${maven.compiler.testTarget}</testTarget>
+  <verbose default-value="false">${maven.compiler.verbose}</verbose>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test (default-test)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <argLine>${argLine}</argLine>
+  <basedir default-value="${basedir}"/>
+  <childDelegation default-value="false">${childDelegation}</childDelegation>
+  <classesDirectory default-value="${project.build.outputDirectory}"/>
+  <debugForkedProcess>${maven.surefire.debug}</debugForkedProcess>
+  <disableXmlReport default-value="false">${disableXmlReport}</disableXmlReport>
+  <enableAssertions default-value="true">${enableAssertions}</enableAssertions>
+  <excludedGroups>${excludedGroups}</excludedGroups>
+  <failIfNoSpecifiedTests>${surefire.failIfNoSpecifiedTests}</failIfNoSpecifiedTests>
+  <failIfNoTests>${failIfNoTests}</failIfNoTests>
+  <forkMode default-value="once">${forkMode}</forkMode>
+  <forkedProcessTimeoutInSeconds>${surefire.timeout}</forkedProcessTimeoutInSeconds>
+  <groups>${groups}</groups>
+  <junitArtifactName default-value="junit:junit">${junitArtifactName}</junitArtifactName>
+  <jvm>${jvm}</jvm>
+  <localRepository default-value="${localRepository}"/>
+  <objectFactory>${objectFactory}</objectFactory>
+  <parallel>${parallel}</parallel>
+  <parallelMavenExecution default-value="${session.parallel}"/>
+  <perCoreThreadCount default-value="true">${perCoreThreadCount}</perCoreThreadCount>
+  <pluginArtifactMap>${plugin.artifactMap}</pluginArtifactMap>
+  <pluginDescriptor default-value="${plugin}"/>
+  <printSummary default-value="true">${surefire.printSummary}</printSummary>
+  <projectArtifactMap>${project.artifactMap}</projectArtifactMap>
+  <redirectTestOutputToFile default-value="false">${maven.test.redirectTestOutputToFile}</redirectTestOutputToFile>
+  <remoteRepositories default-value="${project.pluginArtifactRepositories}"/>
+  <reportFormat default-value="brief">${surefire.reportFormat}</reportFormat>
+  <reportNameSuffix default-value="">${surefire.reportNameSuffix}</reportNameSuffix>
+  <reportsDirectory default-value="${project.build.directory}/surefire-reports"/>
+  <runOrder default-value="filesystem"/>
+  <skip default-value="false">${maven.test.skip}</skip>
+  <skipExec>${maven.test.skip.exec}</skipExec>
+  <skipTests default-value="false">${skipTests}</skipTests>
+  <test>${test}</test>
+  <testClassesDirectory default-value="${project.build.testOutputDirectory}"/>
+  <testFailureIgnore default-value="false">${maven.test.failure.ignore}</testFailureIgnore>
+  <testNGArtifactName default-value="org.testng:testng">${testNGArtifactName}</testNGArtifactName>
+  <testSourceDirectory default-value="${project.build.testSourceDirectory}"/>
+  <threadCount>${threadCount}</threadCount>
+  <trimStackTrace default-value="true">${trimStackTrace}</trimStackTrace>
+  <useFile default-value="true">${surefire.useFile}</useFile>
+  <useManifestOnlyJar default-value="true">${surefire.useManifestOnlyJar}</useManifestOnlyJar>
+  <useSystemClassLoader default-value="true">${surefire.useSystemClassLoader}</useSystemClassLoader>
+  <useUnlimitedThreads default-value="false">${useUnlimitedThreads}</useUnlimitedThreads>
+  <workingDirectory>${basedir}</workingDirectory>
+  <project default-value="${project}"/>
+  <session default-value="${session}"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-jar-plugin:2.4:jar (default-jar)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <classesDirectory default-value="${project.build.outputDirectory}"/>
+  <defaultManifestFile default-value="${project.build.outputDirectory}/META-INF/MANIFEST.MF"/>
+  <finalName default-value="${project.build.finalName}">${jar.finalName}</finalName>
+  <forceCreation default-value="false">${jar.forceCreation}</forceCreation>
+  <outputDirectory default-value="${project.build.directory}"/>
+  <project default-value="${project}"/>
+  <session default-value="${session}"/>
+  <skipIfEmpty default-value="false">${jar.skipIfEmpty}</skipIfEmpty>
+  <useDefaultManifestFile default-value="false">${jar.useDefaultManifestFile}</useDefaultManifestFile>
+</configuration>
+[DEBUG] =======================================================================
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=2, ConflictMarker.markTime=0, ConflictMarker.nodeCount=106, ConflictIdSorter.graphTime=1, ConflictIdSorter.topsortTime=1, ConflictIdSorter.conflictIdCount=45, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=9, ConflictResolver.conflictItemCount=80, DefaultDependencyCollector.collectTime=266, DefaultDependencyCollector.transformTime=15}
+[DEBUG] com.solrstart:javadoc-server:jar:1.0-SNAPSHOT
+[DEBUG]    org.springframework.boot:spring-boot-starter-web:jar:1.0.2.RELEASE:compile
+[DEBUG]       org.springframework.boot:spring-boot-starter:jar:1.0.2.RELEASE:compile
+[DEBUG]          org.springframework.boot:spring-boot:jar:1.0.2.RELEASE:compile
+[DEBUG]          org.springframework.boot:spring-boot-autoconfigure:jar:1.0.2.RELEASE:compile
+[DEBUG]          org.springframework.boot:spring-boot-starter-logging:jar:1.0.2.RELEASE:compile
+[DEBUG]             org.slf4j:jul-to-slf4j:jar:1.7.7:compile
+[DEBUG]             org.slf4j:log4j-over-slf4j:jar:1.7.7:compile
+[DEBUG]             ch.qos.logback:logback-classic:jar:1.1.2:compile
+[DEBUG]                ch.qos.logback:logback-core:jar:1.1.2:compile
+[DEBUG]          org.yaml:snakeyaml:jar:1.13:runtime
+[DEBUG]       org.springframework.boot:spring-boot-starter-tomcat:jar:1.0.2.RELEASE:compile
+[DEBUG]          org.apache.tomcat.embed:tomcat-embed-core:jar:7.0.52:compile
+[DEBUG]          org.apache.tomcat.embed:tomcat-embed-el:jar:7.0.52:compile
+[DEBUG]          org.apache.tomcat.embed:tomcat-embed-logging-juli:jar:7.0.52:compile
+[DEBUG]       com.fasterxml.jackson.core:jackson-databind:jar:2.3.3:compile
+[DEBUG]          com.fasterxml.jackson.core:jackson-annotations:jar:2.3.0:compile
+[DEBUG]          com.fasterxml.jackson.core:jackson-core:jar:2.3.3:compile
+[DEBUG]       org.springframework:spring-web:jar:4.0.3.RELEASE:compile
+[DEBUG]          org.springframework:spring-aop:jar:4.0.3.RELEASE:compile
+[DEBUG]             aopalliance:aopalliance:jar:1.0:compile
+[DEBUG]          org.springframework:spring-beans:jar:4.0.3.RELEASE:compile
+[DEBUG]          org.springframework:spring-core:jar:4.0.3.RELEASE:compile
+[DEBUG]             commons-logging:commons-logging:jar:1.1.3:compile
+[DEBUG]       org.springframework:spring-webmvc:jar:4.0.3.RELEASE:compile
+[DEBUG]          org.springframework:spring-expression:jar:4.0.3.RELEASE:compile
+[DEBUG]    org.springframework.data:spring-data-solr:jar:1.1.1.RELEASE:compile
+[DEBUG]       org.springframework:spring-context:jar:3.2.8.RELEASE:compile
+[DEBUG]       org.springframework:spring-tx:jar:3.2.8.RELEASE:compile
+[DEBUG]       org.springframework.data:spring-data-commons:jar:1.7.1.RELEASE:compile
+[DEBUG]       org.apache.commons:commons-lang3:jar:3.1:compile
+[DEBUG]       commons-collections:commons-collections:jar:3.2.1:compile
+[DEBUG]       org.apache.httpcomponents:httpclient:jar:4.2.2:compile
+[DEBUG]          org.apache.httpcomponents:httpcore:jar:4.2.2:compile
+[DEBUG]          commons-codec:commons-codec:jar:1.6:compile
+[DEBUG]       org.apache.httpcomponents:httpmime:jar:4.2.2:compile
+[DEBUG]       org.apache.httpcomponents:httpclient-cache:jar:4.2.2:compile
+[DEBUG]       org.apache.solr:solr-solrj:jar:4.6.1:compile
+[DEBUG]          org.apache.zookeeper:zookeeper:jar:3.4.5:compile
+[DEBUG]          commons-io:commons-io:jar:2.1:compile
+[DEBUG]          org.noggit:noggit:jar:0.5:compile
+[DEBUG]          org.codehaus.woodstox:wstx-asl:jar:3.2.7:runtime
+[DEBUG]       org.slf4j:slf4j-api:jar:1.7.6:compile
+[DEBUG]       org.slf4j:jcl-over-slf4j:jar:1.7.6:compile
+[DEBUG]    org.springframework.boot:spring-boot-starter-actuator:jar:1.0.2.RELEASE:compile
+[DEBUG]       org.springframework.boot:spring-boot-actuator:jar:1.0.2.RELEASE:compile
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ javadoc-server ---
+[DEBUG] Created new class realm maven.api
+[DEBUG] Importing foreign packages into class realm maven.api
+[DEBUG]   Imported: org.apache.maven.cli < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.internal.impl < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.lifecycle < plexus.core
+[DEBUG]   Imported: org.apache.maven.lifecycle < plexus.core
+[DEBUG]   Imported: org.apache.maven.repository < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.personality < plexus.core
+[DEBUG]   Imported: org.apache.maven.usability < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.configuration < plexus.core
+[DEBUG]   Imported: javax.enterprise.inject.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.project < plexus.core
+[DEBUG]   Imported: org.apache.maven.exception < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.spi < plexus.core
+[DEBUG]   Imported: org.apache.maven.plugin < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.collection < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.* < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.logging < plexus.core
+[DEBUG]   Imported: org.apache.maven.profiles < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.transfer < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParserException < plexus.core
+[DEBUG]   Imported: org.apache.maven.execution.scope < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.rtinfo < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.impl < plexus.core
+[DEBUG]   Imported: org.apache.maven.monitor < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.graph < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.metadata < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.context < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.observers < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.resource < plexus.core
+[DEBUG]   Imported: javax.inject.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.model < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.Xpp3Dom < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.deployment < plexus.core
+[DEBUG]   Imported: org.apache.maven.artifact < plexus.core
+[DEBUG]   Imported: org.apache.maven.toolchain < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.resolution < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlSerializer < plexus.core
+[DEBUG]   Imported: org.apache.maven.settings < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.authorization < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.events < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.authentication < plexus.core
+[DEBUG]   Imported: org.apache.maven.reporting < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.repository < plexus.core
+[DEBUG]   Imported: org.slf4j.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.configuration < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.classworlds < plexus.core
+[DEBUG]   Imported: org.codehaus.classworlds < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParser < plexus.core
+[DEBUG]   Imported: org.apache.maven.classrealm < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.* < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.artifact < plexus.core
+[DEBUG]   Imported: org.apache.maven.execution < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.proxy < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.container < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.version < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.installation < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.component < plexus.core
+[DEBUG] Populating class realm maven.api
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=0, ConflictMarker.markTime=1, ConflictMarker.nodeCount=3, ConflictIdSorter.graphTime=0, ConflictIdSorter.topsortTime=0, ConflictIdSorter.conflictIdCount=3, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=2, ConflictResolver.conflictItemCount=3, DefaultDependencyCollector.collectTime=21, DefaultDependencyCollector.transformTime=3}
+[DEBUG] org.apache.maven.plugins:maven-clean-plugin:jar:2.5:
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:2.0.6:compile
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:3.0:compile
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-clean-plugin:2.5
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-clean-plugin:2.5
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-clean-plugin:2.5
+[DEBUG]   Included: org.apache.maven.plugins:maven-clean-plugin:jar:2.5
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:3.0
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-clean-plugin:2.5:clean from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-clean-plugin:2.5, parent: sun.misc.Launcher$AppClassLoader@4b67cf4d]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-clean-plugin:2.5:clean' with basic configurator -->
+[DEBUG]   (f) directory = /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target
+[DEBUG]   (f) excludeDefaultDirectories = false
+[DEBUG]   (f) failOnError = true
+[DEBUG]   (f) followSymLinks = false
+[DEBUG]   (f) outputDirectory = /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/classes
+[DEBUG]   (f) reportDirectory = /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/site
+[DEBUG]   (f) retryOnError = true
+[DEBUG]   (f) skip = false
+[DEBUG]   (f) testOutputDirectory = /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/test-classes
+[DEBUG] -- end configuration --
+[INFO] Deleting /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/maven-archiver/pom.properties
+[INFO] Deleting directory /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/maven-archiver
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT.jar.original
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/WarLauncher.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/WarLauncher$1.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/util/SystemPropertyUtils.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/util/AsciiBytes.class
+[INFO] Deleting directory /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/util
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/PropertiesLauncher.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/PropertiesLauncher$PrefixMatchingArchiveFilter.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/PropertiesLauncher$ArchiveEntryFilter.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/PropertiesLauncher$1.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/MainMethodRunner.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/Launcher.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/LaunchedURLClassLoader.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/LaunchedURLClassLoader$2.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/LaunchedURLClassLoader$1.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/JarLauncher.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/jar/ZipInflaterInputStream.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/jar/JarURLConnection.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/jar/JarFile.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/jar/JarFile$2.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/jar/JarFile$1.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/jar/JarEntryFilter.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/jar/JarEntryData.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/jar/JarEntry.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/jar/Handler.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/jar/CentralDirectoryEndRecord.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/jar/Bytes.class
+[INFO] Deleting directory /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/ExecutableArchiveLauncher.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/ExecutableArchiveLauncher$1.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/data/RandomAccessDataFile.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/data/RandomAccessDataFile$FilePool.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/data/RandomAccessDataFile$DataInputStream.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/data/RandomAccessData.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/data/RandomAccessData$ResourceAccess.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/data/ByteArrayRandomAccessData.class
+[INFO] Deleting directory /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/data
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/archive/JarFileArchive.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/archive/JarFileArchive$JarFileEntry.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/archive/JarFileArchive$1.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/archive/FilteredArchive.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/archive/FilteredArchive$2.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/archive/FilteredArchive$1.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/archive/ExplodedArchive.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/archive/ExplodedArchive$FilteredURLStreamHandler.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/archive/ExplodedArchive$FileNotFoundURLConnection.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/archive/ExplodedArchive$FileEntry.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/archive/Archive.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/archive/Archive$EntryRenameFilter.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/archive/Archive$EntryFilter.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/archive/Archive$Entry.class
+[INFO] Deleting directory /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/archive
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader/.DS_Store
+[INFO] Deleting directory /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/loader
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot/.DS_Store
+[INFO] Deleting directory /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/boot
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework/.DS_Store
+[INFO] Deleting directory /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/springframework
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org/.DS_Store
+[INFO] Deleting directory /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/org
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/META-INF/maven/com.solrstart/javadoc-server/pom.xml
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/META-INF/maven/com.solrstart/javadoc-server/pom.properties
+[INFO] Deleting directory /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/META-INF/maven/com.solrstart/javadoc-server
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/META-INF/maven/com.solrstart/.DS_Store
+[INFO] Deleting directory /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/META-INF/maven/com.solrstart
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/META-INF/maven/.DS_Store
+[INFO] Deleting directory /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/META-INF/maven
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/META-INF/MANIFEST.MF
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/META-INF/.DS_Store
+[INFO] Deleting directory /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/META-INF
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/zookeeper-3.4.5.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/wstx-asl-3.2.7.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/tomcat-embed-logging-juli-7.0.52.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/tomcat-embed-el-7.0.52.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/tomcat-embed-core-7.0.52.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/spring-webmvc-4.0.3.RELEASE.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/spring-web-4.0.3.RELEASE.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/spring-tx-4.0.3.RELEASE.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/spring-expression-4.0.3.RELEASE.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/spring-data-solr-1.1.1.RELEASE.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/spring-data-commons-1.7.1.RELEASE.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/spring-core-4.0.3.RELEASE.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/spring-context-4.0.3.RELEASE.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/spring-boot-starter-web-1.0.2.RELEASE.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/spring-boot-starter-tomcat-1.0.2.RELEASE.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/spring-boot-starter-logging-1.0.2.RELEASE.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/spring-boot-starter-actuator-1.0.2.RELEASE.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/spring-boot-starter-1.0.2.RELEASE.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/spring-boot-autoconfigure-1.0.2.RELEASE.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/spring-boot-actuator-1.0.2.RELEASE.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/spring-boot-1.0.2.RELEASE.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/spring-beans-4.0.3.RELEASE.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/spring-aop-4.0.3.RELEASE.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/solr-solrj-4.6.1.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/snakeyaml-1.13.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/slf4j-api-1.7.7.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/noggit-0.5.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/logback-core-1.1.2.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/logback-classic-1.1.2.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/log4j-over-slf4j-1.7.7.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/jul-to-slf4j-1.7.7.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/jcl-over-slf4j-1.7.7.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/jackson-databind-2.3.3.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/jackson-core-2.3.3.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/jackson-annotations-2.3.0.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/httpmime-4.2.2.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/httpcore-4.3.2.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/httpclient-cache-4.2.2.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/httpclient-4.3.3.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/commons-lang3-3.1.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/commons-io-2.1.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/commons-collections-3.2.1.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/commons-codec-1.6.jar
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib/aopalliance-1.0.jar
+[INFO] Deleting directory /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/lib
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/com/solrstart/javadoc/server/MatchRepository.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/com/solrstart/javadoc/server/Match.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/com/solrstart/javadoc/server/AutoCompleteServer.class
+[INFO] Deleting directory /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/com/solrstart/javadoc/server
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/com/solrstart/javadoc/.DS_Store
+[INFO] Deleting directory /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/com/solrstart/javadoc
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/com/solrstart/.DS_Store
+[INFO] Deleting directory /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/com/solrstart
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/com/.DS_Store
+[INFO] Deleting directory /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/com
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT/.DS_Store
+[INFO] Deleting directory /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT
+[INFO] Deleting directory /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/generated-sources/annotations
+[INFO] Deleting directory /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/generated-sources
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/classes/com/solrstart/javadoc/server/MatchRepository.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/classes/com/solrstart/javadoc/server/Match.class
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/classes/com/solrstart/javadoc/server/AutoCompleteServer.class
+[INFO] Deleting directory /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/classes/com/solrstart/javadoc/server
+[INFO] Deleting directory /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/classes/com/solrstart/javadoc
+[INFO] Deleting directory /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/classes/com/solrstart
+[INFO] Deleting directory /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/classes/com
+[INFO] Deleting directory /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/classes
+[INFO] Deleting file /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/.DS_Store
+[INFO] Deleting directory /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target
+[DEBUG] Skipping non-existing directory /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/classes
+[DEBUG] Skipping non-existing directory /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/test-classes
+[DEBUG] Skipping non-existing directory /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/site
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ javadoc-server ---
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=0, ConflictMarker.markTime=0, ConflictMarker.nodeCount=77, ConflictIdSorter.graphTime=1, ConflictIdSorter.topsortTime=0, ConflictIdSorter.conflictIdCount=26, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=2, ConflictResolver.conflictItemCount=74, DefaultDependencyCollector.collectTime=164, DefaultDependencyCollector.transformTime=3}
+[DEBUG] org.apache.maven.plugins:maven-resources-plugin:jar:2.6:
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-project:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-profile:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-artifact-manager:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-plugin-registry:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-core:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6:compile
+[DEBUG]       org.apache.maven.reporting:maven-reporting-api:jar:2.0.6:compile
+[DEBUG]          org.apache.maven.doxia:doxia-sink-api:jar:1.0-alpha-7:compile
+[DEBUG]       org.apache.maven:maven-repository-metadata:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-error-diagnostics:jar:2.0.6:compile
+[DEBUG]       commons-cli:commons-cli:jar:1.0:compile
+[DEBUG]       org.apache.maven:maven-plugin-descriptor:jar:2.0.6:compile
+[DEBUG]       org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4:compile
+[DEBUG]       classworlds:classworlds:jar:1.1:compile
+[DEBUG]    org.apache.maven:maven-artifact:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-settings:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-model:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-monitor:jar:2.0.6:compile
+[DEBUG]    org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compile
+[DEBUG]       junit:junit:jar:3.8.1:compile
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:2.0.5:compile
+[DEBUG]    org.apache.maven.shared:maven-filtering:jar:1.1:compile
+[DEBUG]       org.sonatype.plexus:plexus-build-api:jar:0.0.4:compile
+[DEBUG]    org.codehaus.plexus:plexus-interpolation:jar:1.13:compile
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-resources-plugin:2.6
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-resources-plugin:2.6
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-resources-plugin:2.6
+[DEBUG]   Included: org.apache.maven.plugins:maven-resources-plugin:jar:2.6
+[DEBUG]   Included: org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   Included: org.apache.maven.doxia:doxia-sink-api:jar:1.0-alpha-7
+[DEBUG]   Included: commons-cli:commons-cli:jar:1.0
+[DEBUG]   Included: org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4
+[DEBUG]   Included: junit:junit:jar:3.8.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:2.0.5
+[DEBUG]   Included: org.apache.maven.shared:maven-filtering:jar:1.1
+[DEBUG]   Included: org.sonatype.plexus:plexus-build-api:jar:0.0.4
+[DEBUG]   Included: org.codehaus.plexus:plexus-interpolation:jar:1.13
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-core:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-error-diagnostics:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-descriptor:jar:2.0.6
+[DEBUG]   Excluded: classworlds:classworlds:jar:1.1
+[DEBUG]   Excluded: org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG]   Excluded: org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-resources-plugin:2.6:resources from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-resources-plugin:2.6, parent: sun.misc.Launcher$AppClassLoader@4b67cf4d]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-resources-plugin:2.6:resources' with basic configurator -->
+[DEBUG]   (f) buildFilters = []
+[DEBUG]   (f) escapeWindowsPaths = true
+[DEBUG]   (s) includeEmptyDirs = false
+[DEBUG]   (s) outputDirectory = /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/classes
+[DEBUG]   (s) overwrite = false
+[DEBUG]   (f) project = MavenProject: com.solrstart:javadoc-server:1.0-SNAPSHOT @ /Users/arafalov/Projects/Solr-Javadoc/SearchServer/pom.xml
+[DEBUG]   (s) resources = [Resource {targetPath: null, filtering: false, FileSet {directory: /Users/arafalov/Projects/Solr-Javadoc/SearchServer/src/main/resources, PatternSet [includes: {}, excludes: {}]}}]
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@1252b961
+[DEBUG]   (f) supportMultiLineFiltering = false
+[DEBUG]   (f) useBuildFilters = true
+[DEBUG]   (s) useDefaultDelimiters = true
+[DEBUG] -- end configuration --
+[DEBUG] properties used {java.vendor=Oracle Corporation, env.__CHECKFIX1436934=1, sun.java.launcher=SUN_STANDARD, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, env.COLORFGBG=7;0, os.name=Mac OS X, sun.boot.class.path=/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/classes, env.TMPDIR=/var/folders/p9/vs6nf8mn0d13vlrv0b9dv1080000gn/T/, env.PWD=/Users/arafalov/Projects/Solr-Javadoc/SearchServer, user.country.format=TH, java.vm.specification.vendor=Oracle Corporation, java.runtime.version=1.8.0-b132, env.Apple_PubSub_Socket_Render=/tmp/launch-TRBwTD/Render, user.name=arafalov, maven.build.version=Apache Maven 3.2.1 (ea8b2b07643dbb1b84b6d16e1f08391b666bc1e9; 2014-02-15T00:37:52+07:00), env.USER=arafalov, env.SHELL=/bin/bash, env.__CF_USER_TEXT_ENCODING=0x1F5:0:0, env.PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin, user.language=en, sun.boot.library.path=/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib, classworlds.conf=/Users/arafalov/JavaLibraries/apache-maven-3.2.1/bin/m2.conf, env.LC_CTYPE=UTF-8, java.version=1.8.0, user.timezone=Asia/Bangkok, sun.arch.data.model=64, http.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, java.endorsed.dirs=/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/endorsed, sun.cpu.isalist=, sun.jnu.encoding=UTF-8, env.ITERM_SESSION_ID=w1t0p0, file.encoding.pkg=sun.io, env.SHLVL=1, file.separator=/, java.specification.name=Java Platform API Specification, java.class.version=52.0, org.slf4j.simpleLogger.defaultLogLevel=debug, user.country=US, java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre, java.vm.info=mixed mode, env.LOGNAME=arafalov, os.version=10.9.2, maven.compiler.target=1.8, path.separator=:, java.vm.version=25.0-b70, env.JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/, java.awt.printerjob=sun.lwawt.macosx.CPrinterJob, env.TERM=xterm, sun.io.unicode.encoding=UnicodeBig, awt.toolkit=sun.lwawt.macosx.LWCToolkit, socksNonProxyHosts=local|*.local|169.254/16|*.169.254/16, ftp.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, user.home=/Users/arafalov, env.OLDPWD=/Users/arafalov/Projects/Solr-Javadoc/SearchServer, java.specification.vendor=Oracle Corporation, env.TERM_PROGRAM=iTerm.app, java.library.path=/Users/arafalov/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:., java.vendor.url=http://java.oracle.com/, env.MAVEN_CMD_LINE_ARGS=-X clean package, java.vm.vendor=Oracle Corporation, gopherProxySet=false, maven.home=/Users/arafalov/JavaLibraries/apache-maven-3.2.1, java.runtime.name=Java(TM) SE Runtime Environment, sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher -X clean package, java.class.path=/Users/arafalov/JavaLibraries/apache-maven-3.2.1/boot/plexus-classworlds-2.5.1.jar, maven.version=3.2.1, java.vm.specification.name=Java Virtual Machine Specification, java.vm.specification.version=1.8, sun.cpu.endian=little, sun.os.patch.level=unknown, env.HOME=/Users/arafalov, java.io.tmpdir=/var/folders/p9/vs6nf8mn0d13vlrv0b9dv1080000gn/T/, env.JAVA_MAIN_CLASS_17860=org.codehaus.plexus.classworlds.launcher.Launcher, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, env.SSH_AUTH_SOCK=/tmp/launch-ini9gS/Listeners, maven.compiler.source=1.8, os.arch=x86_64, java.awt.graphicsenv=sun.awt.CGraphicsEnvironment, java.ext.dirs=/Users/arafalov/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java, user.dir=/Users/arafalov/Projects/Solr-Javadoc/SearchServer, line.separator=
+, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, env.ITERM_PROFILE=Default, file.encoding=UTF-8, java.specification.version=1.8, env.DESTINATION=/var/folders/p9/vs6nf8mn0d13vlrv0b9dv1080000gn/T/iTerm 1.0.0.20140112 Update 1}
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[DEBUG] resource with targetPath null
+directory /Users/arafalov/Projects/Solr-Javadoc/SearchServer/src/main/resources
+excludes []
+includes []
+[DEBUG] ignoreDelta true
+[INFO] Copying 0 resource
+[DEBUG] no use filter components
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ javadoc-server ---
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=0, ConflictMarker.markTime=0, ConflictMarker.nodeCount=101, ConflictIdSorter.graphTime=1, ConflictIdSorter.topsortTime=0, ConflictIdSorter.conflictIdCount=27, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=1, ConflictResolver.conflictItemCount=49, DefaultDependencyCollector.collectTime=44, DefaultDependencyCollector.transformTime=2}
+[DEBUG] org.apache.maven.plugins:maven-compiler-plugin:jar:2.3.2:
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-artifact:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-core:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-settings:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-profile:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-model:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-repository-metadata:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-error-diagnostics:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-project:jar:2.0.6:compile
+[DEBUG]          org.apache.maven:maven-plugin-registry:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-plugin-descriptor:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-artifact-manager:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-monitor:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-toolchain:jar:1.0:compile
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:2.0.5:compile
+[DEBUG]    org.codehaus.plexus:plexus-compiler-api:jar:1.8.1:compile
+[DEBUG]    org.codehaus.plexus:plexus-compiler-manager:jar:1.8.1:compile
+[DEBUG]    org.codehaus.plexus:plexus-compiler-javac:jar:1.8.1:runtime
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-compiler-plugin:2.3.2
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-compiler-plugin:2.3.2
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-compiler-plugin:2.3.2
+[DEBUG]   Included: org.apache.maven.plugins:maven-compiler-plugin:jar:2.3.2
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:2.0.5
+[DEBUG]   Included: org.codehaus.plexus:plexus-compiler-api:jar:1.8.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-compiler-manager:jar:1.8.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-compiler-javac:jar:1.8.1
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-core:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-error-diagnostics:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-descriptor:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-toolchain:jar:1.0
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-compiler-plugin:2.3.2:compile from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-compiler-plugin:2.3.2, parent: sun.misc.Launcher$AppClassLoader@4b67cf4d]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-compiler-plugin:2.3.2:compile' with basic configurator -->
+[DEBUG]   (f) basedir = /Users/arafalov/Projects/Solr-Javadoc/SearchServer
+[DEBUG]   (f) buildDirectory = /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target
+[DEBUG]   (f) classpathElements = [/Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/classes, /Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-starter-web/1.0.2.RELEASE/spring-boot-starter-web-1.0.2.RELEASE.jar, /Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-starter/1.0.2.RELEASE/spring-boot-starter-1.0.2.RELEASE.jar, /Users/arafalov/.m2/repository/org/springframework/boot/spring-boot/1.0.2.RELEASE/spring-boot-1.0.2.RELEASE.jar, /Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/1.0.2.RELEASE/spring-boot-autoconfigure-1.0.2.RELEASE.jar, /Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-starter-logging/1.0.2.RELEASE/spring-boot-starter-logging-1.0.2.RELEASE.jar, /Users/arafalov/.m2/repository/org/slf4j/jul-to-slf4j/1.7.7/jul-to-slf4j-1.7.7.jar, /Users/arafalov/.m2/repository/org/slf4j/log4j-over-slf4j/1.7.7/log4j-over-slf4j-1.7.7.jar, /Users/arafalov/.m2/repository/ch/qos/logback/logback-classic/1.1.2/logback-classic-1.1.2.jar, /Users/arafalov/.m2/repository/ch/qos/logback/logback-core/1.1.2/logback-core-1.1.2.jar, /Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/1.0.2.RELEASE/spring-boot-starter-tomcat-1.0.2.RELEASE.jar, /Users/arafalov/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/7.0.52/tomcat-embed-core-7.0.52.jar, /Users/arafalov/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/7.0.52/tomcat-embed-el-7.0.52.jar, /Users/arafalov/.m2/repository/org/apache/tomcat/embed/tomcat-embed-logging-juli/7.0.52/tomcat-embed-logging-juli-7.0.52.jar, /Users/arafalov/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.3.3/jackson-databind-2.3.3.jar, /Users/arafalov/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.3.0/jackson-annotations-2.3.0.jar, /Users/arafalov/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.3.3/jackson-core-2.3.3.jar, /Users/arafalov/.m2/repository/org/springframework/spring-web/4.0.3.RELEASE/spring-web-4.0.3.RELEASE.jar, /Users/arafalov/.m2/repository/org/springframework/spring-aop/4.0.3.RELEASE/spring-aop-4.0.3.RELEASE.jar, /Users/arafalov/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar, /Users/arafalov/.m2/repository/org/springframework/spring-beans/4.0.3.RELEASE/spring-beans-4.0.3.RELEASE.jar, /Users/arafalov/.m2/repository/org/springframework/spring-core/4.0.3.RELEASE/spring-core-4.0.3.RELEASE.jar, /Users/arafalov/.m2/repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar, /Users/arafalov/.m2/repository/org/springframework/spring-webmvc/4.0.3.RELEASE/spring-webmvc-4.0.3.RELEASE.jar, /Users/arafalov/.m2/repository/org/springframework/spring-expression/4.0.3.RELEASE/spring-expression-4.0.3.RELEASE.jar, /Users/arafalov/.m2/repository/org/springframework/data/spring-data-solr/1.1.1.RELEASE/spring-data-solr-1.1.1.RELEASE.jar, /Users/arafalov/.m2/repository/org/springframework/spring-context/3.2.8.RELEASE/spring-context-3.2.8.RELEASE.jar, /Users/arafalov/.m2/repository/org/springframework/spring-tx/3.2.8.RELEASE/spring-tx-3.2.8.RELEASE.jar, /Users/arafalov/.m2/repository/org/springframework/data/spring-data-commons/1.7.1.RELEASE/spring-data-commons-1.7.1.RELEASE.jar, /Users/arafalov/.m2/repository/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.jar, /Users/arafalov/.m2/repository/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar, /Users/arafalov/.m2/repository/org/apache/httpcomponents/httpclient/4.2.2/httpclient-4.2.2.jar, /Users/arafalov/.m2/repository/org/apache/httpcomponents/httpcore/4.2.2/httpcore-4.2.2.jar, /Users/arafalov/.m2/repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar, /Users/arafalov/.m2/repository/org/apache/httpcomponents/httpmime/4.2.2/httpmime-4.2.2.jar, /Users/arafalov/.m2/repository/org/apache/httpcomponents/httpclient-cache/4.2.2/httpclient-cache-4.2.2.jar, /Users/arafalov/.m2/repository/org/apache/solr/solr-solrj/4.6.1/solr-solrj-4.6.1.jar, /Users/arafalov/.m2/repository/org/apache/zookeeper/zookeeper/3.4.5/zookeeper-3.4.5.jar, /Users/arafalov/.m2/repository/commons-io/commons-io/2.1/commons-io-2.1.jar, /Users/arafalov/.m2/repository/org/noggit/noggit/0.5/noggit-0.5.jar, /Users/arafalov/.m2/repository/org/slf4j/slf4j-api/1.7.6/slf4j-api-1.7.6.jar, /Users/arafalov/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.6/jcl-over-slf4j-1.7.6.jar, /Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-starter-actuator/1.0.2.RELEASE/spring-boot-starter-actuator-1.0.2.RELEASE.jar, /Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-actuator/1.0.2.RELEASE/spring-boot-actuator-1.0.2.RELEASE.jar]
+[DEBUG]   (f) compileSourceRoots = [/Users/arafalov/Projects/Solr-Javadoc/SearchServer/src/main/java]
+[DEBUG]   (f) compilerId = javac
+[DEBUG]   (f) debug = true
+[DEBUG]   (f) failOnError = true
+[DEBUG]   (f) fork = false
+[DEBUG]   (f) generatedSourcesDirectory = /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/generated-sources/annotations
+[DEBUG]   (f) optimize = false
+[DEBUG]   (f) outputDirectory = /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/classes
+[DEBUG]   (f) outputFileName = javadoc-server-1.0-SNAPSHOT
+[DEBUG]   (f) projectArtifact = com.solrstart:javadoc-server:jar:1.0-SNAPSHOT
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@1252b961
+[DEBUG]   (f) showDeprecation = false
+[DEBUG]   (f) showWarnings = false
+[DEBUG]   (f) source = 1.8
+[DEBUG]   (f) staleMillis = 0
+[DEBUG]   (f) target = 1.8
+[DEBUG]   (f) verbose = false
+[DEBUG] -- end configuration --
+[DEBUG] Using compiler 'javac'.
+[DEBUG] Source directories: [/Users/arafalov/Projects/Solr-Javadoc/SearchServer/src/main/java]
+[DEBUG] Classpath: [/Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/classes
+ /Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-starter-web/1.0.2.RELEASE/spring-boot-starter-web-1.0.2.RELEASE.jar
+ /Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-starter/1.0.2.RELEASE/spring-boot-starter-1.0.2.RELEASE.jar
+ /Users/arafalov/.m2/repository/org/springframework/boot/spring-boot/1.0.2.RELEASE/spring-boot-1.0.2.RELEASE.jar
+ /Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/1.0.2.RELEASE/spring-boot-autoconfigure-1.0.2.RELEASE.jar
+ /Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-starter-logging/1.0.2.RELEASE/spring-boot-starter-logging-1.0.2.RELEASE.jar
+ /Users/arafalov/.m2/repository/org/slf4j/jul-to-slf4j/1.7.7/jul-to-slf4j-1.7.7.jar
+ /Users/arafalov/.m2/repository/org/slf4j/log4j-over-slf4j/1.7.7/log4j-over-slf4j-1.7.7.jar
+ /Users/arafalov/.m2/repository/ch/qos/logback/logback-classic/1.1.2/logback-classic-1.1.2.jar
+ /Users/arafalov/.m2/repository/ch/qos/logback/logback-core/1.1.2/logback-core-1.1.2.jar
+ /Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/1.0.2.RELEASE/spring-boot-starter-tomcat-1.0.2.RELEASE.jar
+ /Users/arafalov/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/7.0.52/tomcat-embed-core-7.0.52.jar
+ /Users/arafalov/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/7.0.52/tomcat-embed-el-7.0.52.jar
+ /Users/arafalov/.m2/repository/org/apache/tomcat/embed/tomcat-embed-logging-juli/7.0.52/tomcat-embed-logging-juli-7.0.52.jar
+ /Users/arafalov/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.3.3/jackson-databind-2.3.3.jar
+ /Users/arafalov/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.3.0/jackson-annotations-2.3.0.jar
+ /Users/arafalov/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.3.3/jackson-core-2.3.3.jar
+ /Users/arafalov/.m2/repository/org/springframework/spring-web/4.0.3.RELEASE/spring-web-4.0.3.RELEASE.jar
+ /Users/arafalov/.m2/repository/org/springframework/spring-aop/4.0.3.RELEASE/spring-aop-4.0.3.RELEASE.jar
+ /Users/arafalov/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar
+ /Users/arafalov/.m2/repository/org/springframework/spring-beans/4.0.3.RELEASE/spring-beans-4.0.3.RELEASE.jar
+ /Users/arafalov/.m2/repository/org/springframework/spring-core/4.0.3.RELEASE/spring-core-4.0.3.RELEASE.jar
+ /Users/arafalov/.m2/repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar
+ /Users/arafalov/.m2/repository/org/springframework/spring-webmvc/4.0.3.RELEASE/spring-webmvc-4.0.3.RELEASE.jar
+ /Users/arafalov/.m2/repository/org/springframework/spring-expression/4.0.3.RELEASE/spring-expression-4.0.3.RELEASE.jar
+ /Users/arafalov/.m2/repository/org/springframework/data/spring-data-solr/1.1.1.RELEASE/spring-data-solr-1.1.1.RELEASE.jar
+ /Users/arafalov/.m2/repository/org/springframework/spring-context/3.2.8.RELEASE/spring-context-3.2.8.RELEASE.jar
+ /Users/arafalov/.m2/repository/org/springframework/spring-tx/3.2.8.RELEASE/spring-tx-3.2.8.RELEASE.jar
+ /Users/arafalov/.m2/repository/org/springframework/data/spring-data-commons/1.7.1.RELEASE/spring-data-commons-1.7.1.RELEASE.jar
+ /Users/arafalov/.m2/repository/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.jar
+ /Users/arafalov/.m2/repository/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar
+ /Users/arafalov/.m2/repository/org/apache/httpcomponents/httpclient/4.2.2/httpclient-4.2.2.jar
+ /Users/arafalov/.m2/repository/org/apache/httpcomponents/httpcore/4.2.2/httpcore-4.2.2.jar
+ /Users/arafalov/.m2/repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar
+ /Users/arafalov/.m2/repository/org/apache/httpcomponents/httpmime/4.2.2/httpmime-4.2.2.jar
+ /Users/arafalov/.m2/repository/org/apache/httpcomponents/httpclient-cache/4.2.2/httpclient-cache-4.2.2.jar
+ /Users/arafalov/.m2/repository/org/apache/solr/solr-solrj/4.6.1/solr-solrj-4.6.1.jar
+ /Users/arafalov/.m2/repository/org/apache/zookeeper/zookeeper/3.4.5/zookeeper-3.4.5.jar
+ /Users/arafalov/.m2/repository/commons-io/commons-io/2.1/commons-io-2.1.jar
+ /Users/arafalov/.m2/repository/org/noggit/noggit/0.5/noggit-0.5.jar
+ /Users/arafalov/.m2/repository/org/slf4j/slf4j-api/1.7.6/slf4j-api-1.7.6.jar
+ /Users/arafalov/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.6/jcl-over-slf4j-1.7.6.jar
+ /Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-starter-actuator/1.0.2.RELEASE/spring-boot-starter-actuator-1.0.2.RELEASE.jar
+ /Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-actuator/1.0.2.RELEASE/spring-boot-actuator-1.0.2.RELEASE.jar]
+[DEBUG] Output directory: /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/classes
+[DEBUG] Classpath:
+[DEBUG]  /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/classes
+[DEBUG]  /Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-starter-web/1.0.2.RELEASE/spring-boot-starter-web-1.0.2.RELEASE.jar
+[DEBUG]  /Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-starter/1.0.2.RELEASE/spring-boot-starter-1.0.2.RELEASE.jar
+[DEBUG]  /Users/arafalov/.m2/repository/org/springframework/boot/spring-boot/1.0.2.RELEASE/spring-boot-1.0.2.RELEASE.jar
+[DEBUG]  /Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/1.0.2.RELEASE/spring-boot-autoconfigure-1.0.2.RELEASE.jar
+[DEBUG]  /Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-starter-logging/1.0.2.RELEASE/spring-boot-starter-logging-1.0.2.RELEASE.jar
+[DEBUG]  /Users/arafalov/.m2/repository/org/slf4j/jul-to-slf4j/1.7.7/jul-to-slf4j-1.7.7.jar
+[DEBUG]  /Users/arafalov/.m2/repository/org/slf4j/log4j-over-slf4j/1.7.7/log4j-over-slf4j-1.7.7.jar
+[DEBUG]  /Users/arafalov/.m2/repository/ch/qos/logback/logback-classic/1.1.2/logback-classic-1.1.2.jar
+[DEBUG]  /Users/arafalov/.m2/repository/ch/qos/logback/logback-core/1.1.2/logback-core-1.1.2.jar
+[DEBUG]  /Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/1.0.2.RELEASE/spring-boot-starter-tomcat-1.0.2.RELEASE.jar
+[DEBUG]  /Users/arafalov/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/7.0.52/tomcat-embed-core-7.0.52.jar
+[DEBUG]  /Users/arafalov/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/7.0.52/tomcat-embed-el-7.0.52.jar
+[DEBUG]  /Users/arafalov/.m2/repository/org/apache/tomcat/embed/tomcat-embed-logging-juli/7.0.52/tomcat-embed-logging-juli-7.0.52.jar
+[DEBUG]  /Users/arafalov/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.3.3/jackson-databind-2.3.3.jar
+[DEBUG]  /Users/arafalov/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.3.0/jackson-annotations-2.3.0.jar
+[DEBUG]  /Users/arafalov/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.3.3/jackson-core-2.3.3.jar
+[DEBUG]  /Users/arafalov/.m2/repository/org/springframework/spring-web/4.0.3.RELEASE/spring-web-4.0.3.RELEASE.jar
+[DEBUG]  /Users/arafalov/.m2/repository/org/springframework/spring-aop/4.0.3.RELEASE/spring-aop-4.0.3.RELEASE.jar
+[DEBUG]  /Users/arafalov/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar
+[DEBUG]  /Users/arafalov/.m2/repository/org/springframework/spring-beans/4.0.3.RELEASE/spring-beans-4.0.3.RELEASE.jar
+[DEBUG]  /Users/arafalov/.m2/repository/org/springframework/spring-core/4.0.3.RELEASE/spring-core-4.0.3.RELEASE.jar
+[DEBUG]  /Users/arafalov/.m2/repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar
+[DEBUG]  /Users/arafalov/.m2/repository/org/springframework/spring-webmvc/4.0.3.RELEASE/spring-webmvc-4.0.3.RELEASE.jar
+[DEBUG]  /Users/arafalov/.m2/repository/org/springframework/spring-expression/4.0.3.RELEASE/spring-expression-4.0.3.RELEASE.jar
+[DEBUG]  /Users/arafalov/.m2/repository/org/springframework/data/spring-data-solr/1.1.1.RELEASE/spring-data-solr-1.1.1.RELEASE.jar
+[DEBUG]  /Users/arafalov/.m2/repository/org/springframework/spring-context/3.2.8.RELEASE/spring-context-3.2.8.RELEASE.jar
+[DEBUG]  /Users/arafalov/.m2/repository/org/springframework/spring-tx/3.2.8.RELEASE/spring-tx-3.2.8.RELEASE.jar
+[DEBUG]  /Users/arafalov/.m2/repository/org/springframework/data/spring-data-commons/1.7.1.RELEASE/spring-data-commons-1.7.1.RELEASE.jar
+[DEBUG]  /Users/arafalov/.m2/repository/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.jar
+[DEBUG]  /Users/arafalov/.m2/repository/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar
+[DEBUG]  /Users/arafalov/.m2/repository/org/apache/httpcomponents/httpclient/4.2.2/httpclient-4.2.2.jar
+[DEBUG]  /Users/arafalov/.m2/repository/org/apache/httpcomponents/httpcore/4.2.2/httpcore-4.2.2.jar
+[DEBUG]  /Users/arafalov/.m2/repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar
+[DEBUG]  /Users/arafalov/.m2/repository/org/apache/httpcomponents/httpmime/4.2.2/httpmime-4.2.2.jar
+[DEBUG]  /Users/arafalov/.m2/repository/org/apache/httpcomponents/httpclient-cache/4.2.2/httpclient-cache-4.2.2.jar
+[DEBUG]  /Users/arafalov/.m2/repository/org/apache/solr/solr-solrj/4.6.1/solr-solrj-4.6.1.jar
+[DEBUG]  /Users/arafalov/.m2/repository/org/apache/zookeeper/zookeeper/3.4.5/zookeeper-3.4.5.jar
+[DEBUG]  /Users/arafalov/.m2/repository/commons-io/commons-io/2.1/commons-io-2.1.jar
+[DEBUG]  /Users/arafalov/.m2/repository/org/noggit/noggit/0.5/noggit-0.5.jar
+[DEBUG]  /Users/arafalov/.m2/repository/org/slf4j/slf4j-api/1.7.6/slf4j-api-1.7.6.jar
+[DEBUG]  /Users/arafalov/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.6/jcl-over-slf4j-1.7.6.jar
+[DEBUG]  /Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-starter-actuator/1.0.2.RELEASE/spring-boot-starter-actuator-1.0.2.RELEASE.jar
+[DEBUG]  /Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-actuator/1.0.2.RELEASE/spring-boot-actuator-1.0.2.RELEASE.jar
+[DEBUG] Source roots:
+[DEBUG]  /Users/arafalov/Projects/Solr-Javadoc/SearchServer/src/main/java
+[DEBUG] Command line options:
+[DEBUG] -d /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/classes -classpath /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/classes:/Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-starter-web/1.0.2.RELEASE/spring-boot-starter-web-1.0.2.RELEASE.jar:/Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-starter/1.0.2.RELEASE/spring-boot-starter-1.0.2.RELEASE.jar:/Users/arafalov/.m2/repository/org/springframework/boot/spring-boot/1.0.2.RELEASE/spring-boot-1.0.2.RELEASE.jar:/Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/1.0.2.RELEASE/spring-boot-autoconfigure-1.0.2.RELEASE.jar:/Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-starter-logging/1.0.2.RELEASE/spring-boot-starter-logging-1.0.2.RELEASE.jar:/Users/arafalov/.m2/repository/org/slf4j/jul-to-slf4j/1.7.7/jul-to-slf4j-1.7.7.jar:/Users/arafalov/.m2/repository/org/slf4j/log4j-over-slf4j/1.7.7/log4j-over-slf4j-1.7.7.jar:/Users/arafalov/.m2/repository/ch/qos/logback/logback-classic/1.1.2/logback-classic-1.1.2.jar:/Users/arafalov/.m2/repository/ch/qos/logback/logback-core/1.1.2/logback-core-1.1.2.jar:/Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/1.0.2.RELEASE/spring-boot-starter-tomcat-1.0.2.RELEASE.jar:/Users/arafalov/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/7.0.52/tomcat-embed-core-7.0.52.jar:/Users/arafalov/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/7.0.52/tomcat-embed-el-7.0.52.jar:/Users/arafalov/.m2/repository/org/apache/tomcat/embed/tomcat-embed-logging-juli/7.0.52/tomcat-embed-logging-juli-7.0.52.jar:/Users/arafalov/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.3.3/jackson-databind-2.3.3.jar:/Users/arafalov/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.3.0/jackson-annotations-2.3.0.jar:/Users/arafalov/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.3.3/jackson-core-2.3.3.jar:/Users/arafalov/.m2/repository/org/springframework/spring-web/4.0.3.RELEASE/spring-web-4.0.3.RELEASE.jar:/Users/arafalov/.m2/repository/org/springframework/spring-aop/4.0.3.RELEASE/spring-aop-4.0.3.RELEASE.jar:/Users/arafalov/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar:/Users/arafalov/.m2/repository/org/springframework/spring-beans/4.0.3.RELEASE/spring-beans-4.0.3.RELEASE.jar:/Users/arafalov/.m2/repository/org/springframework/spring-core/4.0.3.RELEASE/spring-core-4.0.3.RELEASE.jar:/Users/arafalov/.m2/repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar:/Users/arafalov/.m2/repository/org/springframework/spring-webmvc/4.0.3.RELEASE/spring-webmvc-4.0.3.RELEASE.jar:/Users/arafalov/.m2/repository/org/springframework/spring-expression/4.0.3.RELEASE/spring-expression-4.0.3.RELEASE.jar:/Users/arafalov/.m2/repository/org/springframework/data/spring-data-solr/1.1.1.RELEASE/spring-data-solr-1.1.1.RELEASE.jar:/Users/arafalov/.m2/repository/org/springframework/spring-context/3.2.8.RELEASE/spring-context-3.2.8.RELEASE.jar:/Users/arafalov/.m2/repository/org/springframework/spring-tx/3.2.8.RELEASE/spring-tx-3.2.8.RELEASE.jar:/Users/arafalov/.m2/repository/org/springframework/data/spring-data-commons/1.7.1.RELEASE/spring-data-commons-1.7.1.RELEASE.jar:/Users/arafalov/.m2/repository/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.jar:/Users/arafalov/.m2/repository/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar:/Users/arafalov/.m2/repository/org/apache/httpcomponents/httpclient/4.2.2/httpclient-4.2.2.jar:/Users/arafalov/.m2/repository/org/apache/httpcomponents/httpcore/4.2.2/httpcore-4.2.2.jar:/Users/arafalov/.m2/repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar:/Users/arafalov/.m2/repository/org/apache/httpcomponents/httpmime/4.2.2/httpmime-4.2.2.jar:/Users/arafalov/.m2/repository/org/apache/httpcomponents/httpclient-cache/4.2.2/httpclient-cache-4.2.2.jar:/Users/arafalov/.m2/repository/org/apache/solr/solr-solrj/4.6.1/solr-solrj-4.6.1.jar:/Users/arafalov/.m2/repository/org/apache/zookeeper/zookeeper/3.4.5/zookeeper-3.4.5.jar:/Users/arafalov/.m2/repository/commons-io/commons-io/2.1/commons-io-2.1.jar:/Users/arafalov/.m2/repository/org/noggit/noggit/0.5/noggit-0.5.jar:/Users/arafalov/.m2/repository/org/slf4j/slf4j-api/1.7.6/slf4j-api-1.7.6.jar:/Users/arafalov/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.6/jcl-over-slf4j-1.7.6.jar:/Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-starter-actuator/1.0.2.RELEASE/spring-boot-starter-actuator-1.0.2.RELEASE.jar:/Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-actuator/1.0.2.RELEASE/spring-boot-actuator-1.0.2.RELEASE.jar: -sourcepath /Users/arafalov/Projects/Solr-Javadoc/SearchServer/src/main/java: /Users/arafalov/Projects/Solr-Javadoc/SearchServer/src/main/java/com/solrstart/javadoc/server/AutoCompleteServer.java /Users/arafalov/Projects/Solr-Javadoc/SearchServer/src/main/java/com/solrstart/javadoc/server/Match.java /Users/arafalov/Projects/Solr-Javadoc/SearchServer/src/main/java/com/solrstart/javadoc/server/MatchRepository.java -s /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/generated-sources/annotations -g -nowarn -target 1.8 -source 1.8
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 3 source files to /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ javadoc-server ---
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-resources-plugin:2.6:testResources from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-resources-plugin:2.6, parent: sun.misc.Launcher$AppClassLoader@4b67cf4d]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-resources-plugin:2.6:testResources' with basic configurator -->
+[DEBUG]   (f) buildFilters = []
+[DEBUG]   (f) escapeWindowsPaths = true
+[DEBUG]   (s) includeEmptyDirs = false
+[DEBUG]   (s) outputDirectory = /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/test-classes
+[DEBUG]   (s) overwrite = false
+[DEBUG]   (f) project = MavenProject: com.solrstart:javadoc-server:1.0-SNAPSHOT @ /Users/arafalov/Projects/Solr-Javadoc/SearchServer/pom.xml
+[DEBUG]   (s) resources = [Resource {targetPath: null, filtering: false, FileSet {directory: /Users/arafalov/Projects/Solr-Javadoc/SearchServer/src/test/resources, PatternSet [includes: {}, excludes: {}]}}]
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@1252b961
+[DEBUG]   (f) supportMultiLineFiltering = false
+[DEBUG]   (f) useBuildFilters = true
+[DEBUG]   (s) useDefaultDelimiters = true
+[DEBUG] -- end configuration --
+[DEBUG] properties used {java.vendor=Oracle Corporation, env.__CHECKFIX1436934=1, sun.java.launcher=SUN_STANDARD, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, env.COLORFGBG=7;0, os.name=Mac OS X, sun.boot.class.path=/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/classes, env.TMPDIR=/var/folders/p9/vs6nf8mn0d13vlrv0b9dv1080000gn/T/, env.PWD=/Users/arafalov/Projects/Solr-Javadoc/SearchServer, user.country.format=TH, java.vm.specification.vendor=Oracle Corporation, java.runtime.version=1.8.0-b132, env.Apple_PubSub_Socket_Render=/tmp/launch-TRBwTD/Render, user.name=arafalov, maven.build.version=Apache Maven 3.2.1 (ea8b2b07643dbb1b84b6d16e1f08391b666bc1e9; 2014-02-15T00:37:52+07:00), env.USER=arafalov, env.SHELL=/bin/bash, env.__CF_USER_TEXT_ENCODING=0x1F5:0:0, env.PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin, user.language=en, sun.boot.library.path=/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib, classworlds.conf=/Users/arafalov/JavaLibraries/apache-maven-3.2.1/bin/m2.conf, env.LC_CTYPE=UTF-8, java.version=1.8.0, user.timezone=Asia/Bangkok, sun.arch.data.model=64, http.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, java.endorsed.dirs=/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/endorsed, sun.cpu.isalist=, sun.jnu.encoding=UTF-8, env.ITERM_SESSION_ID=w1t0p0, file.encoding.pkg=sun.io, env.SHLVL=1, file.separator=/, java.specification.name=Java Platform API Specification, java.class.version=52.0, org.slf4j.simpleLogger.defaultLogLevel=debug, user.country=US, java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre, java.vm.info=mixed mode, env.LOGNAME=arafalov, os.version=10.9.2, maven.compiler.target=1.8, path.separator=:, java.vm.version=25.0-b70, env.JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/, java.awt.printerjob=sun.lwawt.macosx.CPrinterJob, env.TERM=xterm, sun.io.unicode.encoding=UnicodeBig, awt.toolkit=sun.lwawt.macosx.LWCToolkit, socksNonProxyHosts=local|*.local|169.254/16|*.169.254/16, ftp.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, user.home=/Users/arafalov, env.OLDPWD=/Users/arafalov/Projects/Solr-Javadoc/SearchServer, java.specification.vendor=Oracle Corporation, env.TERM_PROGRAM=iTerm.app, java.library.path=/Users/arafalov/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:., java.vendor.url=http://java.oracle.com/, env.MAVEN_CMD_LINE_ARGS=-X clean package, java.vm.vendor=Oracle Corporation, gopherProxySet=false, maven.home=/Users/arafalov/JavaLibraries/apache-maven-3.2.1, java.runtime.name=Java(TM) SE Runtime Environment, sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher -X clean package, java.class.path=/Users/arafalov/JavaLibraries/apache-maven-3.2.1/boot/plexus-classworlds-2.5.1.jar, maven.version=3.2.1, java.vm.specification.name=Java Virtual Machine Specification, java.vm.specification.version=1.8, sun.cpu.endian=little, sun.os.patch.level=unknown, env.HOME=/Users/arafalov, java.io.tmpdir=/var/folders/p9/vs6nf8mn0d13vlrv0b9dv1080000gn/T/, env.JAVA_MAIN_CLASS_17860=org.codehaus.plexus.classworlds.launcher.Launcher, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, env.SSH_AUTH_SOCK=/tmp/launch-ini9gS/Listeners, maven.compiler.source=1.8, os.arch=x86_64, java.awt.graphicsenv=sun.awt.CGraphicsEnvironment, java.ext.dirs=/Users/arafalov/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java, user.dir=/Users/arafalov/Projects/Solr-Javadoc/SearchServer, line.separator=
+, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, env.ITERM_PROFILE=Default, file.encoding=UTF-8, java.specification.version=1.8, env.DESTINATION=/var/folders/p9/vs6nf8mn0d13vlrv0b9dv1080000gn/T/iTerm 1.0.0.20140112 Update 1}
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[DEBUG] resource with targetPath null
+directory /Users/arafalov/Projects/Solr-Javadoc/SearchServer/src/test/resources
+excludes []
+includes []
+[INFO] skip non existing resourceDirectory /Users/arafalov/Projects/Solr-Javadoc/SearchServer/src/test/resources
+[DEBUG] no use filter components
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ javadoc-server ---
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-compiler-plugin:2.3.2:testCompile from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-compiler-plugin:2.3.2, parent: sun.misc.Launcher$AppClassLoader@4b67cf4d]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-compiler-plugin:2.3.2:testCompile' with basic configurator -->
+[DEBUG]   (f) basedir = /Users/arafalov/Projects/Solr-Javadoc/SearchServer
+[DEBUG]   (f) buildDirectory = /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target
+[DEBUG]   (f) classpathElements = [/Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/test-classes, /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/classes, /Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-starter-web/1.0.2.RELEASE/spring-boot-starter-web-1.0.2.RELEASE.jar, /Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-starter/1.0.2.RELEASE/spring-boot-starter-1.0.2.RELEASE.jar, /Users/arafalov/.m2/repository/org/springframework/boot/spring-boot/1.0.2.RELEASE/spring-boot-1.0.2.RELEASE.jar, /Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/1.0.2.RELEASE/spring-boot-autoconfigure-1.0.2.RELEASE.jar, /Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-starter-logging/1.0.2.RELEASE/spring-boot-starter-logging-1.0.2.RELEASE.jar, /Users/arafalov/.m2/repository/org/slf4j/jul-to-slf4j/1.7.7/jul-to-slf4j-1.7.7.jar, /Users/arafalov/.m2/repository/org/slf4j/log4j-over-slf4j/1.7.7/log4j-over-slf4j-1.7.7.jar, /Users/arafalov/.m2/repository/ch/qos/logback/logback-classic/1.1.2/logback-classic-1.1.2.jar, /Users/arafalov/.m2/repository/ch/qos/logback/logback-core/1.1.2/logback-core-1.1.2.jar, /Users/arafalov/.m2/repository/org/yaml/snakeyaml/1.13/snakeyaml-1.13.jar, /Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/1.0.2.RELEASE/spring-boot-starter-tomcat-1.0.2.RELEASE.jar, /Users/arafalov/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/7.0.52/tomcat-embed-core-7.0.52.jar, /Users/arafalov/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/7.0.52/tomcat-embed-el-7.0.52.jar, /Users/arafalov/.m2/repository/org/apache/tomcat/embed/tomcat-embed-logging-juli/7.0.52/tomcat-embed-logging-juli-7.0.52.jar, /Users/arafalov/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.3.3/jackson-databind-2.3.3.jar, /Users/arafalov/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.3.0/jackson-annotations-2.3.0.jar, /Users/arafalov/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.3.3/jackson-core-2.3.3.jar, /Users/arafalov/.m2/repository/org/springframework/spring-web/4.0.3.RELEASE/spring-web-4.0.3.RELEASE.jar, /Users/arafalov/.m2/repository/org/springframework/spring-aop/4.0.3.RELEASE/spring-aop-4.0.3.RELEASE.jar, /Users/arafalov/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar, /Users/arafalov/.m2/repository/org/springframework/spring-beans/4.0.3.RELEASE/spring-beans-4.0.3.RELEASE.jar, /Users/arafalov/.m2/repository/org/springframework/spring-core/4.0.3.RELEASE/spring-core-4.0.3.RELEASE.jar, /Users/arafalov/.m2/repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar, /Users/arafalov/.m2/repository/org/springframework/spring-webmvc/4.0.3.RELEASE/spring-webmvc-4.0.3.RELEASE.jar, /Users/arafalov/.m2/repository/org/springframework/spring-expression/4.0.3.RELEASE/spring-expression-4.0.3.RELEASE.jar, /Users/arafalov/.m2/repository/org/springframework/data/spring-data-solr/1.1.1.RELEASE/spring-data-solr-1.1.1.RELEASE.jar, /Users/arafalov/.m2/repository/org/springframework/spring-context/3.2.8.RELEASE/spring-context-3.2.8.RELEASE.jar, /Users/arafalov/.m2/repository/org/springframework/spring-tx/3.2.8.RELEASE/spring-tx-3.2.8.RELEASE.jar, /Users/arafalov/.m2/repository/org/springframework/data/spring-data-commons/1.7.1.RELEASE/spring-data-commons-1.7.1.RELEASE.jar, /Users/arafalov/.m2/repository/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.jar, /Users/arafalov/.m2/repository/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar, /Users/arafalov/.m2/repository/org/apache/httpcomponents/httpclient/4.2.2/httpclient-4.2.2.jar, /Users/arafalov/.m2/repository/org/apache/httpcomponents/httpcore/4.2.2/httpcore-4.2.2.jar, /Users/arafalov/.m2/repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar, /Users/arafalov/.m2/repository/org/apache/httpcomponents/httpmime/4.2.2/httpmime-4.2.2.jar, /Users/arafalov/.m2/repository/org/apache/httpcomponents/httpclient-cache/4.2.2/httpclient-cache-4.2.2.jar, /Users/arafalov/.m2/repository/org/apache/solr/solr-solrj/4.6.1/solr-solrj-4.6.1.jar, /Users/arafalov/.m2/repository/org/apache/zookeeper/zookeeper/3.4.5/zookeeper-3.4.5.jar, /Users/arafalov/.m2/repository/commons-io/commons-io/2.1/commons-io-2.1.jar, /Users/arafalov/.m2/repository/org/noggit/noggit/0.5/noggit-0.5.jar, /Users/arafalov/.m2/repository/org/codehaus/woodstox/wstx-asl/3.2.7/wstx-asl-3.2.7.jar, /Users/arafalov/.m2/repository/org/slf4j/slf4j-api/1.7.6/slf4j-api-1.7.6.jar, /Users/arafalov/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.6/jcl-over-slf4j-1.7.6.jar, /Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-starter-actuator/1.0.2.RELEASE/spring-boot-starter-actuator-1.0.2.RELEASE.jar, /Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-actuator/1.0.2.RELEASE/spring-boot-actuator-1.0.2.RELEASE.jar]
+[DEBUG]   (f) compileSourceRoots = [/Users/arafalov/Projects/Solr-Javadoc/SearchServer/src/test/java]
+[DEBUG]   (f) compilerId = javac
+[DEBUG]   (f) debug = true
+[DEBUG]   (f) failOnError = true
+[DEBUG]   (f) fork = false
+[DEBUG]   (f) generatedTestSourcesDirectory = /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/generated-sources/test-annotations
+[DEBUG]   (f) optimize = false
+[DEBUG]   (f) outputDirectory = /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/test-classes
+[DEBUG]   (f) outputFileName = javadoc-server-1.0-SNAPSHOT
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@1252b961
+[DEBUG]   (f) showDeprecation = false
+[DEBUG]   (f) showWarnings = false
+[DEBUG]   (f) source = 1.8
+[DEBUG]   (f) staleMillis = 0
+[DEBUG]   (f) target = 1.8
+[DEBUG]   (f) verbose = false
+[DEBUG] -- end configuration --
+[DEBUG] Using compiler 'javac'.
+[DEBUG] Source directories: [/Users/arafalov/Projects/Solr-Javadoc/SearchServer/src/test/java]
+[DEBUG] Classpath: [/Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/test-classes
+ /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/classes
+ /Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-starter-web/1.0.2.RELEASE/spring-boot-starter-web-1.0.2.RELEASE.jar
+ /Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-starter/1.0.2.RELEASE/spring-boot-starter-1.0.2.RELEASE.jar
+ /Users/arafalov/.m2/repository/org/springframework/boot/spring-boot/1.0.2.RELEASE/spring-boot-1.0.2.RELEASE.jar
+ /Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/1.0.2.RELEASE/spring-boot-autoconfigure-1.0.2.RELEASE.jar
+ /Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-starter-logging/1.0.2.RELEASE/spring-boot-starter-logging-1.0.2.RELEASE.jar
+ /Users/arafalov/.m2/repository/org/slf4j/jul-to-slf4j/1.7.7/jul-to-slf4j-1.7.7.jar
+ /Users/arafalov/.m2/repository/org/slf4j/log4j-over-slf4j/1.7.7/log4j-over-slf4j-1.7.7.jar
+ /Users/arafalov/.m2/repository/ch/qos/logback/logback-classic/1.1.2/logback-classic-1.1.2.jar
+ /Users/arafalov/.m2/repository/ch/qos/logback/logback-core/1.1.2/logback-core-1.1.2.jar
+ /Users/arafalov/.m2/repository/org/yaml/snakeyaml/1.13/snakeyaml-1.13.jar
+ /Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/1.0.2.RELEASE/spring-boot-starter-tomcat-1.0.2.RELEASE.jar
+ /Users/arafalov/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/7.0.52/tomcat-embed-core-7.0.52.jar
+ /Users/arafalov/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/7.0.52/tomcat-embed-el-7.0.52.jar
+ /Users/arafalov/.m2/repository/org/apache/tomcat/embed/tomcat-embed-logging-juli/7.0.52/tomcat-embed-logging-juli-7.0.52.jar
+ /Users/arafalov/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.3.3/jackson-databind-2.3.3.jar
+ /Users/arafalov/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.3.0/jackson-annotations-2.3.0.jar
+ /Users/arafalov/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.3.3/jackson-core-2.3.3.jar
+ /Users/arafalov/.m2/repository/org/springframework/spring-web/4.0.3.RELEASE/spring-web-4.0.3.RELEASE.jar
+ /Users/arafalov/.m2/repository/org/springframework/spring-aop/4.0.3.RELEASE/spring-aop-4.0.3.RELEASE.jar
+ /Users/arafalov/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar
+ /Users/arafalov/.m2/repository/org/springframework/spring-beans/4.0.3.RELEASE/spring-beans-4.0.3.RELEASE.jar
+ /Users/arafalov/.m2/repository/org/springframework/spring-core/4.0.3.RELEASE/spring-core-4.0.3.RELEASE.jar
+ /Users/arafalov/.m2/repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar
+ /Users/arafalov/.m2/repository/org/springframework/spring-webmvc/4.0.3.RELEASE/spring-webmvc-4.0.3.RELEASE.jar
+ /Users/arafalov/.m2/repository/org/springframework/spring-expression/4.0.3.RELEASE/spring-expression-4.0.3.RELEASE.jar
+ /Users/arafalov/.m2/repository/org/springframework/data/spring-data-solr/1.1.1.RELEASE/spring-data-solr-1.1.1.RELEASE.jar
+ /Users/arafalov/.m2/repository/org/springframework/spring-context/3.2.8.RELEASE/spring-context-3.2.8.RELEASE.jar
+ /Users/arafalov/.m2/repository/org/springframework/spring-tx/3.2.8.RELEASE/spring-tx-3.2.8.RELEASE.jar
+ /Users/arafalov/.m2/repository/org/springframework/data/spring-data-commons/1.7.1.RELEASE/spring-data-commons-1.7.1.RELEASE.jar
+ /Users/arafalov/.m2/repository/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.jar
+ /Users/arafalov/.m2/repository/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar
+ /Users/arafalov/.m2/repository/org/apache/httpcomponents/httpclient/4.2.2/httpclient-4.2.2.jar
+ /Users/arafalov/.m2/repository/org/apache/httpcomponents/httpcore/4.2.2/httpcore-4.2.2.jar
+ /Users/arafalov/.m2/repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar
+ /Users/arafalov/.m2/repository/org/apache/httpcomponents/httpmime/4.2.2/httpmime-4.2.2.jar
+ /Users/arafalov/.m2/repository/org/apache/httpcomponents/httpclient-cache/4.2.2/httpclient-cache-4.2.2.jar
+ /Users/arafalov/.m2/repository/org/apache/solr/solr-solrj/4.6.1/solr-solrj-4.6.1.jar
+ /Users/arafalov/.m2/repository/org/apache/zookeeper/zookeeper/3.4.5/zookeeper-3.4.5.jar
+ /Users/arafalov/.m2/repository/commons-io/commons-io/2.1/commons-io-2.1.jar
+ /Users/arafalov/.m2/repository/org/noggit/noggit/0.5/noggit-0.5.jar
+ /Users/arafalov/.m2/repository/org/codehaus/woodstox/wstx-asl/3.2.7/wstx-asl-3.2.7.jar
+ /Users/arafalov/.m2/repository/org/slf4j/slf4j-api/1.7.6/slf4j-api-1.7.6.jar
+ /Users/arafalov/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.6/jcl-over-slf4j-1.7.6.jar
+ /Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-starter-actuator/1.0.2.RELEASE/spring-boot-starter-actuator-1.0.2.RELEASE.jar
+ /Users/arafalov/.m2/repository/org/springframework/boot/spring-boot-actuator/1.0.2.RELEASE/spring-boot-actuator-1.0.2.RELEASE.jar]
+[DEBUG] Output directory: /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/test-classes
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ javadoc-server ---
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=3, ConflictMarker.markTime=0, ConflictMarker.nodeCount=132, ConflictIdSorter.graphTime=0, ConflictIdSorter.topsortTime=0, ConflictIdSorter.conflictIdCount=27, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=2, ConflictResolver.conflictItemCount=77, DefaultDependencyCollector.collectTime=126, DefaultDependencyCollector.transformTime=5}
+[DEBUG] org.apache.maven.plugins:maven-surefire-plugin:jar:2.12.4:
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:2.0.9:compile
+[DEBUG]    org.apache.maven.surefire:surefire-booter:jar:2.12.4:compile
+[DEBUG]       org.apache.maven.surefire:surefire-api:jar:2.12.4:compile
+[DEBUG]    org.apache.maven.surefire:maven-surefire-common:jar:2.12.4:compile
+[DEBUG]       org.apache.commons:commons-lang3:jar:3.1:compile
+[DEBUG]       org.apache.maven.shared:maven-common-artifact-filters:jar:1.3:compile
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:3.0.8:compile
+[DEBUG]    org.apache.maven:maven-artifact:jar:2.0.9:compile
+[DEBUG]    org.apache.maven:maven-project:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-settings:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-profile:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-model:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-artifact-manager:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-plugin-registry:jar:2.0.9:compile
+[DEBUG]       org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compile
+[DEBUG]          junit:junit:jar:3.8.1:test
+[DEBUG]    org.apache.maven:maven-core:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.9:compile
+[DEBUG]       org.apache.maven.reporting:maven-reporting-api:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-repository-metadata:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-error-diagnostics:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-plugin-descriptor:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-monitor:jar:2.0.9:compile
+[DEBUG]       classworlds:classworlds:jar:1.1:compile
+[DEBUG]    org.apache.maven:maven-toolchain:jar:2.0.9:compile
+[DEBUG]    org.apache.maven.plugin-tools:maven-plugin-annotations:jar:3.1:compile
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-surefire-plugin:2.12.4
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-surefire-plugin:2.12.4
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-surefire-plugin:2.12.4
+[DEBUG]   Included: org.apache.maven.plugins:maven-surefire-plugin:jar:2.12.4
+[DEBUG]   Included: org.apache.maven.surefire:surefire-booter:jar:2.12.4
+[DEBUG]   Included: org.apache.maven.surefire:surefire-api:jar:2.12.4
+[DEBUG]   Included: org.apache.maven.surefire:maven-surefire-common:jar:2.12.4
+[DEBUG]   Included: org.apache.commons:commons-lang3:jar:3.1
+[DEBUG]   Included: org.apache.maven.shared:maven-common-artifact-filters:jar:1.3
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:3.0.8
+[DEBUG]   Included: org.apache.maven.reporting:maven-reporting-api:jar:2.0.9
+[DEBUG]   Included: org.apache.maven.plugin-tools:maven-plugin-annotations:jar:3.1
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-api:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-artifact:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-project:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-settings:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-profile:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-model:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-artifact-manager:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-registry:jar:2.0.9
+[DEBUG]   Excluded: org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   Excluded: junit:junit:jar:3.8.1
+[DEBUG]   Excluded: org.apache.maven:maven-core:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-repository-metadata:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-error-diagnostics:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-descriptor:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-monitor:jar:2.0.9
+[DEBUG]   Excluded: classworlds:classworlds:jar:1.1
+[DEBUG]   Excluded: org.apache.maven:maven-toolchain:jar:2.0.9
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-surefire-plugin:2.12.4, parent: sun.misc.Launcher$AppClassLoader@4b67cf4d]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test' with basic configurator -->
+[DEBUG]   (s) basedir = /Users/arafalov/Projects/Solr-Javadoc/SearchServer
+[DEBUG]   (s) childDelegation = false
+[DEBUG]   (s) classesDirectory = /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/classes
+[DEBUG]   (s) disableXmlReport = false
+[DEBUG]   (s) enableAssertions = true
+[DEBUG]   (s) forkMode = once
+[DEBUG]   (s) junitArtifactName = junit:junit
+[DEBUG]   (s) localRepository =        id: local
+      url: file:///Users/arafalov/.m2/repository/
+   layout: default
+snapshots: [enabled => true, update => always]
+ releases: [enabled => true, update => always]
+
+[DEBUG]   (f) parallelMavenExecution = false
+[DEBUG]   (s) perCoreThreadCount = true
+[DEBUG]   (s) pluginArtifactMap = {org.apache.maven.plugins:maven-surefire-plugin=org.apache.maven.plugins:maven-surefire-plugin:maven-plugin:2.12.4:, org.apache.maven.surefire:surefire-booter=org.apache.maven.surefire:surefire-booter:jar:2.12.4:compile, org.apache.maven.surefire:surefire-api=org.apache.maven.surefire:surefire-api:jar:2.12.4:compile, org.apache.maven.surefire:maven-surefire-common=org.apache.maven.surefire:maven-surefire-common:jar:2.12.4:compile, org.apache.commons:commons-lang3=org.apache.commons:commons-lang3:jar:3.1:compile, org.apache.maven.shared:maven-common-artifact-filters=org.apache.maven.shared:maven-common-artifact-filters:jar:1.3:compile, org.codehaus.plexus:plexus-utils=org.codehaus.plexus:plexus-utils:jar:3.0.8:compile, org.apache.maven.reporting:maven-reporting-api=org.apache.maven.reporting:maven-reporting-api:jar:2.0.9:compile, org.apache.maven.plugin-tools:maven-plugin-annotations=org.apache.maven.plugin-tools:maven-plugin-annotations:jar:3.1:compile}
+[DEBUG]   (f) pluginDescriptor = Component Descriptor: role: 'org.apache.maven.plugin.Mojo', implementation: 'org.apache.maven.plugin.surefire.HelpMojo', role hint: 'org.apache.maven.plugins:maven-surefire-plugin:2.12.4:help'
+role: 'org.apache.maven.plugin.Mojo', implementation: 'org.apache.maven.plugin.surefire.SurefirePlugin', role hint: 'org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test'
+---
+[DEBUG]   (s) printSummary = true
+[DEBUG]   (s) projectArtifactMap = {org.springframework.boot:spring-boot-starter-web=org.springframework.boot:spring-boot-starter-web:jar:1.0.2.RELEASE:compile, org.springframework.boot:spring-boot-starter=org.springframework.boot:spring-boot-starter:jar:1.0.2.RELEASE:compile, org.springframework.boot:spring-boot=org.springframework.boot:spring-boot:jar:1.0.2.RELEASE:compile, org.springframework.boot:spring-boot-autoconfigure=org.springframework.boot:spring-boot-autoconfigure:jar:1.0.2.RELEASE:compile, org.springframework.boot:spring-boot-starter-logging=org.springframework.boot:spring-boot-starter-logging:jar:1.0.2.RELEASE:compile, org.slf4j:jul-to-slf4j=org.slf4j:jul-to-slf4j:jar:1.7.7:compile, org.slf4j:log4j-over-slf4j=org.slf4j:log4j-over-slf4j:jar:1.7.7:compile, ch.qos.logback:logback-classic=ch.qos.logback:logback-classic:jar:1.1.2:compile, ch.qos.logback:logback-core=ch.qos.logback:logback-core:jar:1.1.2:compile, org.yaml:snakeyaml=org.yaml:snakeyaml:jar:1.13:runtime, org.springframework.boot:spring-boot-starter-tomcat=org.springframework.boot:spring-boot-starter-tomcat:jar:1.0.2.RELEASE:compile, org.apache.tomcat.embed:tomcat-embed-core=org.apache.tomcat.embed:tomcat-embed-core:jar:7.0.52:compile, org.apache.tomcat.embed:tomcat-embed-el=org.apache.tomcat.embed:tomcat-embed-el:jar:7.0.52:compile, org.apache.tomcat.embed:tomcat-embed-logging-juli=org.apache.tomcat.embed:tomcat-embed-logging-juli:jar:7.0.52:compile, com.fasterxml.jackson.core:jackson-databind=com.fasterxml.jackson.core:jackson-databind:jar:2.3.3:compile, com.fasterxml.jackson.core:jackson-annotations=com.fasterxml.jackson.core:jackson-annotations:jar:2.3.0:compile, com.fasterxml.jackson.core:jackson-core=com.fasterxml.jackson.core:jackson-core:jar:2.3.3:compile, org.springframework:spring-web=org.springframework:spring-web:jar:4.0.3.RELEASE:compile, org.springframework:spring-aop=org.springframework:spring-aop:jar:4.0.3.RELEASE:compile, aopalliance:aopalliance=aopalliance:aopalliance:jar:1.0:compile, org.springframework:spring-beans=org.springframework:spring-beans:jar:4.0.3.RELEASE:compile, org.springframework:spring-core=org.springframework:spring-core:jar:4.0.3.RELEASE:compile, commons-logging:commons-logging=commons-logging:commons-logging:jar:1.1.3:compile, org.springframework:spring-webmvc=org.springframework:spring-webmvc:jar:4.0.3.RELEASE:compile, org.springframework:spring-expression=org.springframework:spring-expression:jar:4.0.3.RELEASE:compile, org.springframework.data:spring-data-solr=org.springframework.data:spring-data-solr:jar:1.1.1.RELEASE:compile, org.springframework:spring-context=org.springframework:spring-context:jar:3.2.8.RELEASE:compile, org.springframework:spring-tx=org.springframework:spring-tx:jar:3.2.8.RELEASE:compile, org.springframework.data:spring-data-commons=org.springframework.data:spring-data-commons:jar:1.7.1.RELEASE:compile, org.apache.commons:commons-lang3=org.apache.commons:commons-lang3:jar:3.1:compile, commons-collections:commons-collections=commons-collections:commons-collections:jar:3.2.1:compile, org.apache.httpcomponents:httpclient=org.apache.httpcomponents:httpclient:jar:4.2.2:compile, org.apache.httpcomponents:httpcore=org.apache.httpcomponents:httpcore:jar:4.2.2:compile, commons-codec:commons-codec=commons-codec:commons-codec:jar:1.6:compile, org.apache.httpcomponents:httpmime=org.apache.httpcomponents:httpmime:jar:4.2.2:compile, org.apache.httpcomponents:httpclient-cache=org.apache.httpcomponents:httpclient-cache:jar:4.2.2:compile, org.apache.solr:solr-solrj=org.apache.solr:solr-solrj:jar:4.6.1:compile, org.apache.zookeeper:zookeeper=org.apache.zookeeper:zookeeper:jar:3.4.5:compile, commons-io:commons-io=commons-io:commons-io:jar:2.1:compile, org.noggit:noggit=org.noggit:noggit:jar:0.5:compile, org.codehaus.woodstox:wstx-asl=org.codehaus.woodstox:wstx-asl:jar:3.2.7:runtime, org.slf4j:slf4j-api=org.slf4j:slf4j-api:jar:1.7.6:compile, org.slf4j:jcl-over-slf4j=org.slf4j:jcl-over-slf4j:jar:1.7.6:compile, org.springframework.boot:spring-boot-starter-actuator=org.springframework.boot:spring-boot-starter-actuator:jar:1.0.2.RELEASE:compile, org.springframework.boot:spring-boot-actuator=org.springframework.boot:spring-boot-actuator:jar:1.0.2.RELEASE:compile}
+[DEBUG]   (s) redirectTestOutputToFile = false
+[DEBUG]   (s) remoteRepositories = [       id: spring-snapshots
+      url: http://repo.spring.io/libs-snapshot
+   layout: default
+snapshots: [enabled => true, update => daily]
+ releases: [enabled => true, update => daily]
+,        id: central
+      url: http://repo.maven.apache.org/maven2
+   layout: default
+snapshots: [enabled => false, update => daily]
+ releases: [enabled => true, update => never]
+]
+[DEBUG]   (s) reportFormat = brief
+[DEBUG]   (s) reportsDirectory = /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/surefire-reports
+[DEBUG]   (s) runOrder = filesystem
+[DEBUG]   (s) skip = false
+[DEBUG]   (s) skipTests = false
+[DEBUG]   (s) testClassesDirectory = /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/test-classes
+[DEBUG]   (s) testFailureIgnore = false
+[DEBUG]   (s) testNGArtifactName = org.testng:testng
+[DEBUG]   (s) testSourceDirectory = /Users/arafalov/Projects/Solr-Javadoc/SearchServer/src/test/java
+[DEBUG]   (s) trimStackTrace = true
+[DEBUG]   (s) useFile = true
+[DEBUG]   (s) useManifestOnlyJar = true
+[DEBUG]   (s) useSystemClassLoader = true
+[DEBUG]   (s) useUnlimitedThreads = false
+[DEBUG]   (s) workingDirectory = /Users/arafalov/Projects/Solr-Javadoc/SearchServer
+[DEBUG]   (s) project = MavenProject: com.solrstart:javadoc-server:1.0-SNAPSHOT @ /Users/arafalov/Projects/Solr-Javadoc/SearchServer/pom.xml
+[DEBUG]   (s) session = org.apache.maven.execution.MavenSession@1252b961
+[DEBUG] -- end configuration --
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ javadoc-server ---
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=1, ConflictMarker.markTime=0, ConflictMarker.nodeCount=74, ConflictIdSorter.graphTime=0, ConflictIdSorter.topsortTime=0, ConflictIdSorter.conflictIdCount=28, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=1, ConflictResolver.conflictItemCount=70, DefaultDependencyCollector.collectTime=29, DefaultDependencyCollector.transformTime=2}
+[DEBUG] org.apache.maven.plugins:maven-jar-plugin:jar:2.4:
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-project:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-settings:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-profile:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-artifact-manager:jar:2.0.6:compile
+[DEBUG]          org.apache.maven:maven-repository-metadata:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-plugin-registry:jar:2.0.6:compile
+[DEBUG]       org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compile
+[DEBUG]          junit:junit:jar:3.8.1:compile
+[DEBUG]          classworlds:classworlds:jar:1.1-alpha-2:compile
+[DEBUG]    org.apache.maven:maven-model:jar:2.0.6:runtime
+[DEBUG]    org.apache.maven:maven-artifact:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-archiver:jar:2.5:compile
+[DEBUG]       org.apache.maven:maven-core:jar:2.0.6:compile
+[DEBUG]          org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6:compile
+[DEBUG]          org.apache.maven.reporting:maven-reporting-api:jar:2.0.6:compile
+[DEBUG]             org.apache.maven.doxia:doxia-sink-api:jar:1.0-alpha-7:compile
+[DEBUG]          org.apache.maven:maven-error-diagnostics:jar:2.0.6:compile
+[DEBUG]          commons-cli:commons-cli:jar:1.0:compile
+[DEBUG]          org.apache.maven:maven-plugin-descriptor:jar:2.0.6:compile
+[DEBUG]          org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4:compile
+[DEBUG]          org.apache.maven:maven-monitor:jar:2.0.6:compile
+[DEBUG]       org.codehaus.plexus:plexus-interpolation:jar:1.15:compile
+[DEBUG]    org.codehaus.plexus:plexus-archiver:jar:2.1:compile
+[DEBUG]       org.codehaus.plexus:plexus-io:jar:2.0.2:compile
+[DEBUG]    commons-lang:commons-lang:jar:2.1:compile
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:3.0:compile
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-jar-plugin:2.4
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-jar-plugin:2.4
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-jar-plugin:2.4
+[DEBUG]   Included: org.apache.maven.plugins:maven-jar-plugin:jar:2.4
+[DEBUG]   Included: junit:junit:jar:3.8.1
+[DEBUG]   Included: org.apache.maven:maven-archiver:jar:2.5
+[DEBUG]   Included: org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   Included: org.apache.maven.doxia:doxia-sink-api:jar:1.0-alpha-7
+[DEBUG]   Included: commons-cli:commons-cli:jar:1.0
+[DEBUG]   Included: org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4
+[DEBUG]   Included: org.codehaus.plexus:plexus-interpolation:jar:1.15
+[DEBUG]   Included: org.codehaus.plexus:plexus-archiver:jar:2.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-io:jar:2.0.2
+[DEBUG]   Included: commons-lang:commons-lang:jar:2.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:3.0
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   Excluded: org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   Excluded: classworlds:classworlds:jar:1.1-alpha-2
+[DEBUG]   Excluded: org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-core:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-error-diagnostics:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-descriptor:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-jar-plugin:2.4:jar from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-jar-plugin:2.4, parent: sun.misc.Launcher$AppClassLoader@4b67cf4d]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-jar-plugin:2.4:jar' with basic configurator -->
+[DEBUG]   (f) classesDirectory = /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/classes
+[DEBUG]   (f) defaultManifestFile = /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/classes/META-INF/MANIFEST.MF
+[DEBUG]   (f) finalName = javadoc-server-1.0-SNAPSHOT
+[DEBUG]   (f) forceCreation = false
+[DEBUG]   (f) outputDirectory = /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target
+[DEBUG]   (f) project = MavenProject: com.solrstart:javadoc-server:1.0-SNAPSHOT @ /Users/arafalov/Projects/Solr-Javadoc/SearchServer/pom.xml
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@1252b961
+[DEBUG]   (f) skipIfEmpty = false
+[DEBUG]   (f) useDefaultManifestFile = false
+[DEBUG] -- end configuration --
+[DEBUG] isUp2date: false (Destination /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT.jar not found.)
+[INFO] Building jar: /Users/arafalov/Projects/Solr-Javadoc/SearchServer/target/javadoc-server-1.0-SNAPSHOT.jar
+[DEBUG] adding directory META-INF/
+[DEBUG] adding entry META-INF/MANIFEST.MF
+[DEBUG] adding directory com/
+[DEBUG] adding directory com/solrstart/
+[DEBUG] adding directory com/solrstart/javadoc/
+[DEBUG] adding directory com/solrstart/javadoc/server/
+[DEBUG] adding entry com/solrstart/javadoc/server/AutoCompleteServer.class
+[DEBUG] adding entry com/solrstart/javadoc/server/Match.class
+[DEBUG] adding entry com/solrstart/javadoc/server/MatchRepository.class
+[DEBUG] adding directory META-INF/maven/
+[DEBUG] adding directory META-INF/maven/com.solrstart/
+[DEBUG] adding directory META-INF/maven/com.solrstart/javadoc-server/
+[DEBUG] adding entry META-INF/maven/com.solrstart/javadoc-server/pom.xml
+[DEBUG] adding entry META-INF/maven/com.solrstart/javadoc-server/pom.properties
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.180 s
+[INFO] Finished at: 2014-05-08T14:44:09+07:00
+[INFO] Final Memory: 17M/101M
+[INFO] ------------------------------------------------------------------------
