@@ -15,10 +15,10 @@
 			<str name="qf">packageName^8 className^4 methodName^2 fieldName</str>
 			<str name="tie">0.1</str>
 			<str name="mm">100%</str>
-            <str name="version">4.8</str>
+            <str name="apiVersion">4.8</str>
 		</lst>
       <lst name="appends">
-            <str name="fq">{!term f=version v=$version}</str>
+            <str name="fq">{!term f=apiVersion v=$apiVersion}</str>
       </lst>
   </requestHandler>
 

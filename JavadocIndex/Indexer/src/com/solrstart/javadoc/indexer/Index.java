@@ -29,9 +29,9 @@ public class Index {
     private static SolrServer SOLR_SERVER;
 
     /**
-     * The name of the Solr version that current run is for
+     * The name of the API version that current run is for
      */
-    private static String SOLR_VERSION;
+    private static String API_VERSION;
 
     /**
      * Magic signature that gets invoked by the Javadoc as custom doclet
@@ -161,9 +161,9 @@ public class Index {
     {
         SolrInputDocument solrDoc = new SolrInputDocument();
         solrDoc.addField("module", MODULE);
-        solrDoc.addField("id", String.format("%s-%d", SOLR_VERSION ,++ID_SEQ));
+        solrDoc.addField("id", String.format("%s-%d", API_VERSION,++ID_SEQ));
         solrDoc.addField("type", type);
-        solrDoc.addField("version", SOLR_VERSION);
+        solrDoc.addField("apiVersion", API_VERSION);
         return solrDoc;
 
     }
@@ -190,9 +190,9 @@ public class Index {
             System.err.println("We are expecting parameters start from solr version label and then in groups of 3: module sourcepath subpackages");
         }
 
-        SOLR_VERSION = args[0]; //should be 4.8 or 4.7.1 or similar
+        API_VERSION = args[0]; //should be 4.8 or 4.7.1 or similar
 
-        SOLR_SERVER.deleteByQuery("version:" + SOLR_VERSION); //we trust this parameter not to be a hack...
+        SOLR_SERVER.deleteByQuery("apiVersion:" + API_VERSION); //we trust this parameter not to be a hack...
         SOLR_SERVER.commit();
 
         for(int offset = 1; offset<args.length; offset+=3){
