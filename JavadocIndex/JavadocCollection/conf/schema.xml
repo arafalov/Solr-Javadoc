@@ -26,7 +26,8 @@
 			<filter class="solr.WordDelimiterFilterFactory" preserveOriginal="1" />
 			<filter class="solr.PatternCaptureGroupFilterFactory" pattern="(ASCII|BCD|CJK|CSV|DIH|FST|HTML|ICU|JSON|LRU|MBean|NGram|NRT|POST|RAM|SPI|SSL|TFIDF|TST|UAX|UIMA|URL|UTF|UUID|XML|XPath|XSLT)(.*)" preserve_original="true"/>
 			<filter class="solr.LowerCaseFilterFactory" />
-			<filter class="solr.EdgeNGramFilterFactory"  minGramSize="3" maxGramSize="40"/>
+			<filter class="solr.EdgeNGramFilterFactory"  minGramSize="1" maxGramSize="40"/>
+			<filter class="solr.RemoveDuplicatesTokenFilterFactory"/>
 		</analyzer>
 		<analyzer type="query">
 			<tokenizer class="solr.KeywordTokenizerFactory"/>
