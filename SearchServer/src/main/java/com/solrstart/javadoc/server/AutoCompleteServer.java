@@ -42,7 +42,7 @@ public class AutoCompleteServer {
         //remove any characters that are not alphanumerics, spaces, underscores, dollars, or fullstops
         query = query.replaceAll("[^a-zA-Z0-9 _$.]", " ");
         query = query.replaceAll(" +", " "); //replace multiple spaces with one
-        if (query.length()<3) {
+        if (query.length()<1) {
             return null;
         }
 
