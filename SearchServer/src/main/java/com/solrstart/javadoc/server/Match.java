@@ -126,18 +126,16 @@ public class Match {
                         packageAsPath);
                 break;
             case "class":
-            case "method":
 //                urlTarget = String.format("%s/%s/index.html?%s/%s.html",
                 urlTarget = String.format("%s/%s/%s/%s.html",
                         base,
                         module,
                         packageAsPath,
                         className);
+                break;
 
-            case "methodNoFrame": //dead for now. frames do not support #anchors
+            case "method":
                 //e.g. http://localhost:8983/javadoc/solr-core/index.html?org/apache/solr/SolrLogFormatter.html
-                //Can't do method signature anchor link yet
-//                urlTarget = String.format("%s/%s/index.html?%s/%s.html#%s",
                 urlTarget = String.format("%s/%s/%s/%s.html#%s",
                         base,
                         module,
