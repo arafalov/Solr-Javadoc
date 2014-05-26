@@ -104,12 +104,33 @@ public class Index {
                         docList.add(methodInfo);
                     }
                 }
+
+                indexFields(docList, packageName, className, classDoc.fields(), "Field");
+
+                //NOTE: DOES not seem to trigger in JDK 1.8. Even enum constants are processed as fields
+                indexFields(docList, packageName, className, classDoc.enumConstants(), "Enum");
+
             }
             SOLR_SERVER.add(docList);
         }
         SOLR_SERVER.commit();
         return true;
 
+    }
+
+    private static void indexFields(Collection<SolrInputDocument> docList, String packageName, String className,
+                                    FieldDoc[] fields, String fieldType) {
+        for (FieldDoc fieldDoc : fields) {
+            {
+                SolrInputDocument fieldInfo = createSolrDoc("field");
+                fieldInfo.addField("packageName", packageName); //no boost
+                fieldInfo.addField("className", className);
+                fieldInfo.addField("fieldName", fieldDoc.name(), 10);
+                fieldInfo.addField("description", fieldType + " ${className}.${fieldName} (in package ${packageName})");
+                addComment(fieldDoc, fieldInfo);
+                docList.add(fieldInfo);
+            }
+        }
     }
 
     private static String buildHTMLAnchor(MethodDoc methodDoc) {

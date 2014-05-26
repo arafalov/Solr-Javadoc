@@ -18,13 +18,14 @@ public class Match {
     @Field private final String comment;
     @Field private final String module;
     @Field private final String methodAnchor;
+    @Field private final String fieldName;
 
     private final String packageAsPath;
 
     private String htmlDescription;
     private String urlTarget;
 
-    public Match(String id, String type, String packageName, String className, String sourceClassName,  String methodName, String description, String comment, String module, String methodAnchor)
+    public Match(String id, String type, String packageName, String className, String sourceClassName,  String methodName, String fieldName, String description, String comment, String module, String methodAnchor)
     {
         this.id = id;
         this.type = type;
@@ -32,6 +33,7 @@ public class Match {
         this.className = className;
         this.sourceClassName = sourceClassName;
         this.methodName = methodName;
+        this.fieldName = fieldName;
         this.description = description;
         this.comment = comment;
         this.module = module;
@@ -64,6 +66,10 @@ public class Match {
         return methodName;
     }
 
+    public String getFieldName() {
+        return fieldName;
+    }
+
     public String getDescription() {
         return description;
     }
@@ -93,6 +99,7 @@ public class Match {
         result = replace(result, "className", overrides.get("className"), getClassName());
         result = replace(result, "sourceClassName", overrides.get("sourceClassName"), getSourceClassName());
         result = replace(result, "methodName", overrides.get("methodName"), getMethodName());
+        result = replace(result, "fieldName", overrides.get("fieldName"), getFieldName());
         this.htmlDescription = result;
     }
 
@@ -143,6 +150,16 @@ public class Match {
                         className,
                         methodAnchor);
                 break;
+
+            case "field":
+                urlTarget = String.format("%s/%s/%s/%s.html#%s",
+                        base,
+                        module,
+                        packageAsPath,
+                        className,
+                        fieldName);
+                break;
+
             case "inherit":
                 //Same as class, but use sourceClassName
 //                urlTarget = String.format("%s/%s/index.html?%s/%s.html",
