@@ -4,6 +4,9 @@
     <script src="js/select2.min.js"></script>
     <script>
     $(document).ready(function() {
+        var typedTerm = "-NONE-";
+        var matchCount = -1;
+
         $("#e1").select2({
             minimumInputLength: 1,
             placeholder: "Search for a match",
@@ -12,9 +15,16 @@
                 quietMillis: 300,
                 dataType: "json",
                 data: function(term, page){
+                    console.log("search for", term);
+                    typedTerm = term;
                     return { query: term };
                 },
                 results: function(data, page){
+                    matchCount = data.length
+                    if (matchCount == 0) {
+                        console.log("nothing found for", typedTerm);
+                    }
+                    console.log("data", data.length, data);
                     return {results: data};
                 },
 
@@ -37,6 +47,7 @@
         //Events
         $("#e1")
             .on("change", function(e) {
+                console.log("term", typedTerm, "count", matchCount, "go", e.added.urlTarget);
                 console.log("change "+JSON.stringify({val:e.val, added:e.added, removed:e.removed}));
                 window.open(e.added.urlTarget);
             })
